@@ -1,0 +1,170 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "app"
+msgid "Change Avatar"
+msgstr ""
+
+msgctxt "app"
+msgid "Confirm your email address"
+msgstr ""
+
+msgctxt "app"
+msgid "Finish >>"
+msgstr ""
+
+msgctxt "app"
+msgid ""
+"First, please confirm your email address. Then you can complete your profile "
+"data."
+msgstr ""
+
+msgctxt "app"
+msgid "Please fill out the following fields to complete sign up:"
+msgstr ""
+
+msgctxt "app"
+msgid "Profile"
+msgstr ""
+
+msgctxt "app"
+msgid "Profile of "
+msgstr ""
+
+msgctxt "app"
+msgid "Step 2 >>"
+msgstr ""
+
+msgctxt "app"
+msgid ""
+"The verification code is not correct. Please try again with a valid url."
+msgstr ""
+
+msgctxt "app"
+msgid "This email address has already been taken."
+msgstr ""
+
+msgctxt "app"
+msgid "This username has already been taken."
+msgstr ""
+
+msgctxt "app"
+msgid "Welcome to Ultimate Developers,"
+msgstr ""
+
+msgctxt "app"
+msgid "Welcome to Ultimate Developers. Please confirm your email"
+msgstr ""
+
+msgctxt "app"
+msgid ""
+"Your email address is verified successfully. Please complete your profile "
+"data now!"
+msgstr ""
+
+msgctxt "app"
+msgid ""
+"an activation code is sent to {mail}. \n"
+"                    Please follow the instructions in your mail."
+msgstr ""
+
+msgctxt "app"
+msgid "there was a problem to send email verification code. please try later."
+msgstr ""
+
+msgctxt "app_1"
+msgid "About Us"
+msgstr "درباره ما"
+
+msgctxt "app_1"
+msgid "English"
+msgstr "English"
+
+msgctxt "app_1"
+msgid "Farsi"
+msgstr "فارسی"
+
+msgctxt "app_1"
+msgid "Guide"
+msgstr "راهنما"
+
+msgctxt "app_1"
+msgid ""
+"Hi {user} \n"
+"Welcome to {bot} bot. Enjoy your time here 😊.\n"
+"Read the guide if you need help"
+msgstr ""
+"سلام {user}\n"
+"به ربات {bot} خوش اومدی. امیدوارم حسابی اینجا بهت خوش بگذره 😊\n"
+"اگر کمک نیاز داشتی از دکمه راهنما استفاده کن و یا دستور /help رو به ربات "
+"ارسال کن"
+
+msgctxt "app_1"
+msgid "Invite Friends"
+msgstr "دعوت از دوستان"
+
+msgctxt "app_1"
+msgid "Join Contest"
+msgstr "شرکت در مسابقه"
+
+msgctxt "app_1"
+msgid "Please choose your language"
+msgstr ""
+"لطفا زبان خود را انتخاب کنید: \n"
+"(please choose your language)"
+
+msgctxt "app_1"
+msgid "Results"
+msgstr "مشاهده نتایج"
+
+msgctxt "app_1"
+msgid "Upgrade to premium"
+msgstr "ارتقاء به نسخه ویژه"
+
+msgctxt "app_bot"
+msgid ""
+"You have not payed your subscription fee yet or its validation time has "
+"expired. you need to pay now"
+msgstr ""
+"شما هزینه اشتراک خود را پرداخت نکرده اید و یا زمان اشتراک شما پایان یافته "
+"است.\n"
+"لطفا برای ادامه کار، حق اشتراک خود را پرداخت نمایید."
+
+msgctxt "app_bot"
+msgid "buy {vt} subscription for {price} toman"
+msgstr "پرداخت {price} تومان برای {vt}"
+
+msgctxt "app_bot"
+msgid "day"
+msgstr "روز"
+
+msgctxt "app_bot"
+msgid "month"
+msgstr "ماه"
+
+msgctxt "app_bot"
+msgid ""
+"please send a text. no click on previous menu tabs. just type a text or "
+"latest menu items"
+msgstr ""
+"لطفا فقط یک متن ارسال نمایید و از استفاده ی دکمه های قبلی جدا پرهیز کنید. "
+"این عمل ممکن است در سرویس دهی به شما تاثیرات منفی داشته باشد."
+
+msgctxt "app_bot"
+msgid "the fee for this bot is {price} Rials for {vt}"
+msgstr "حق اشتراک این ربات برای مدت {vt}، مبلغ {price} تومان می باشد."
+
+msgctxt "app_bot"
+msgid "week"
+msgstr "هفته"
