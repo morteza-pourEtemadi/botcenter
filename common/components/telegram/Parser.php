@@ -148,8 +148,6 @@ class Parser extends Model
 
         if (isset($this->update->message->text)) {
             $translations = Json::decode($this->bot->translations);
-            var_dump($translations, $translations[$this->update->message->text]);
-            exit();
             if (isset($translations[$this->update->message->text])) {
                 $textWords = explode(' ', $translations[$this->update->message->text]);
             } else {
@@ -166,7 +164,8 @@ class Parser extends Model
         if (empty($textWords) === false) {
             $pattern = $textWords[0];
         }
-
+        var_dump($pattern, explode(' ', $translations[$this->update->message->text]));
+        exit();
         $commandIndex = array_search($pattern, $patterns, false);
         if ($commandIndex === false) {
             if ($this->getReplyCommand()) {
