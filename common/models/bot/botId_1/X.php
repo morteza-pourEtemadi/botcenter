@@ -13,6 +13,7 @@ use common\components\RedisActiveRecord;
  * @property integer id
  * @property integer creator_id
  * @property string file_id
+ * @property string caption
  * @property string code
  * @property integer status
  * @property integer created_at
@@ -29,6 +30,7 @@ class X extends RedisActiveRecord
             'id',
             'creator_id',
             'file_id',
+            'caption',
             'code',
             'status',
             'created_at',
@@ -39,7 +41,7 @@ class X extends RedisActiveRecord
     {
         return [
             [['creator_id', 'status', 'created_at'], 'integer'],
-            [['file_id', 'code'], 'string'],
+            [['caption', 'file_id', 'code'], 'string'],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
         ];
     }

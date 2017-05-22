@@ -84,6 +84,11 @@ abstract class Command extends Component
     public $_messageText;
 
     /**
+     * @var string
+     */
+    public $_pureText;
+
+    /**
      * Sets global chat id, username and message text. whether its callback or not!
      */
     public function setChatProperties()
@@ -92,10 +97,12 @@ abstract class Command extends Component
             $this->_chatId = $this->update->message->chat->id;
             $this->_chatUsername = $this->update->message->chat->username;
             $this->_messageText = $this->update->message->text;
+            $this->_pureText = $this->puringText($this->update->message->text);
         } else {
             $this->_chatId = $this->update->callback_query->message->chat->id;
             $this->_chatUsername = $this->update->callback_query->message->chat->username;
             $this->_messageText = $this->update->callback_query->data;
+            $this->_pureText = $this->puringText($this->update->callback_query->data);
         }
     }
 
@@ -127,6 +134,12 @@ abstract class Command extends Component
         }
 
         if ($this->reply !== null) {
+            $reply = Yii::$app->cache->get('reply:' . $this->bot->bot_id . $this->_chatId);
+            if (isset($reply['command'])) {
+                if ($reply['command'] != $this->pattern && strpos($this->pattern, 'cancel') == false) {
+                    $this->killReply();
+                }
+            }
             $this->isReply = true;
         }
         return true;
@@ -490,6 +503,11 @@ abstract class Command extends Component
             return $chat->last_name;
         }
         return '';
+    }
+
+    public function puringText($text)
+    {
+        return mb_substr($text, 0, 1) == '/' ? Yii::t('app_1', 'No text') : $text;
     }
 
     /**

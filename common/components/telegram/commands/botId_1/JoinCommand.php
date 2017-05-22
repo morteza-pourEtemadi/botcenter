@@ -47,35 +47,58 @@ class JoinCommand extends CommandLocal
             $this->sendMessage(Yii::t('app_1', 'Please send a dubsmash clip to join the contest. Please notice that sent «File» must be a video!'));
             return true;
         } else {
-            if ($this->update->message->isVideo() == false) {
-                $this->sendMessage(Yii::t('app_1', 'Please just send a Video. Pay attention to your file`s format.'));
-                return true;
+            if ($this->getReply()['join'] == '1') {
+                if ($this->update->message->isVideo() == false) {
+                    $this->sendMessage(Yii::t('app_1', 'Please just send a Video. Pay attention to your file`s format.'));
+                    return true;
+                }
+                // Creating new Item
+                $item = new X([
+                    'creator_id' => $this->_chatId,
+                    'file_id' => $this->update->message->getFileId(),
+                ]);
+
+                $item->caption = isset($this->update->message->caption) ? $this->update->message->caption : '';
+                $item->save();
+                // Update User Info
+                $user->XsNo += 1;
+                $user->save();
+
+                $this->killReply();
+                $this->setReply(['join' => 2, 'id' => $item->id]);
+
+                if ($item->caption == '') {
+                    $this->killKeyboard();
+                    $this->sendMessage(Yii::t('app_1', 'Now enter a caption'));
+                } else {
+                    $this->sendFinalMessages($item);
+                }
+            } elseif ($this->getReply()['join'] == '2') {
+                $item = X::findOne(['id' => $this->getReply()['id']]);
+                $item->caption = $this->_pureText;
+                $item->save();
+                $this->sendFinalMessages($item);
             }
-            // Creating new Item
-            $item = new X([
-                'creator_id' => $this->_chatId,
-                'file_id' => $this->update->message->getFileId(),
-            ]);
-            $item->save();
-            // Update User Info
-            $user->XsNo += 1;
-            $user->save();
-
-            $this->killKeyboard();
-            $this->sendMessage(Yii::t('app_1', 'Your clip is saved. Now it is participated in competition.'));
-            usleep(750000);
-
-            $url = 'https://tlgrm.me/' . $this->bot->username . '?start=' . $item->code;
-            $message = Yii::t('app_1', "Please vote for my clip. It`s an exciting competition with great prizes\n\nClick the following link to watch my dubsmash and vote for it\n");
-            $message .= $url;
-            $this->sendMessage($message);
-            usleep(1750000);
-
-            $this->setPartKeyboard('competition');
-            $this->sendMessage(Yii::t('app_1', 'Forward above message to your friends. So they can vote for your clip'));
         }
 
         return true;
+    }
+
+    public function sendFinalMessages($item)
+    {
+        $this->killReply();
+        $this->killKeyboard();
+        $this->sendMessage(Yii::t('app_1', 'Your clip is saved. Now it is participated in competition.'));
+        usleep(750000);
+
+        $url = 'https://tlgrm.me/' . $this->bot->username . '?start=' . $item->code;
+        $message = Yii::t('app_1', "Please vote for my clip. It`s an exciting competition with great prizes\n\nClick the following link to watch my dubsmash and vote for it\n");
+        $message .= $url;
+        $this->sendMessage($message);
+        usleep(1750000);
+
+        $this->setPartKeyboard('competition');
+        $this->sendMessage(Yii::t('app_1', 'Forward above message to your friends. So they can vote for your clip'));
     }
 
     /**
