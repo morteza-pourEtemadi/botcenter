@@ -57,6 +57,7 @@ class StartCommand extends CommandLocal
                 Yii::$app->language = ($input[2] == 1) ? 'fa-IR' : 'en-US';
                 $newUser = true;
                 if (isset($input[3])) {
+                    $payload = base64_decode($input[3]);
                     $this->killKeyboard();
                     $this->sendMessage(Yii::t('app_1', "Hi {user} \nWelcome to {bot} bot. Enjoy your time here 😊.\nRead the guide if you need help", ['user' => $this->getFirstName(), 'bot' => $this->bot->first_name]));
                 } else {
@@ -64,11 +65,12 @@ class StartCommand extends CommandLocal
                     $this->sendMessage(Yii::t('app_1', "Hi {user} \nWelcome to {bot} bot. Enjoy your time here 😊.\nRead the guide if you need help", ['user' => $this->getFirstName(), 'bot' => $this->bot->first_name]));
                     return true;
                 }
+            } else {
+                $payload = base64_decode($input[1]);
             }
-            $payload = base64_decode($input[1]);
             $inputParts = explode(':', $payload);
             if ($inputParts[0] == 'X') {
-                $this->setCache(['code' => $input[1]]);
+                $this->setCache(['code' => ($input[1] == 'lang' ? $input[3] : $input[1])]);
                 $this->setPartKeyboard('showItemStart');
                 $this->sendMessage(Yii::t('app_1', 'click the button to watch the clip'));
                 return true;
@@ -80,12 +82,19 @@ class StartCommand extends CommandLocal
                     $caller = User::findOne(['user_id' => $inputParts[1]]);
                     $caller->bonus_score += 50;
                     $caller->save();
+
+                    $this->setMainKeyboard();
+                    $this->sendMessage(Yii::t('app_1', 'You earned 15 points for joining via invite link and person who invited you gained 50 points'));
+                } else {
+                    $this->setMainKeyboard();
+                    $this->sendMessage(Yii::t('app_1', 'You have used the bot before. So this invitation is not count!'));
                 }
+                return true;
             }
-        } else {
-            $this->setMainKeyboard();
-            $this->sendMessage(Yii::t('app_1', "Hi {user} \nWelcome to {bot} bot. Enjoy your time here 😊.\nRead the guide if you need help", ['user' => $this->getFirstName(), 'bot' => $this->bot->first_name]));
         }
+
+        $this->setMainKeyboard();
+        $this->sendMessage(Yii::t('app_1', "Hi {user} \nWelcome to {bot} bot. Enjoy your time here 😊.\nRead the guide if you need help", ['user' => $this->getFirstName(), 'bot' => $this->bot->first_name]));
         return true;
     }
 
