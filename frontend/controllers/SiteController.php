@@ -1,24 +1,25 @@
 <?php
 namespace frontend\controllers;
 
-use common\models\bot\Subscribers;
-use frontend\models\SigninForm2;
 use Yii;
-use common\models\User;
-use frontend\models\SigninForm1;
-use yii\base\InvalidParamException;
-use yii\helpers\Json;
 use yii\helpers\Url;
-use yii\web\BadRequestHttpException;
+use yii\helpers\Json;
 use yii\web\Controller;
+use yii\web\UploadedFile;
+use yii\web\BadRequestHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\LoginForm;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
+use yii\base\InvalidParamException;
 use frontend\models\SignupForm;
+use frontend\models\SigninForm1;
+use frontend\models\SigninForm2;
 use frontend\models\ContactForm;
-use yii\web\UploadedFile;
+use frontend\models\ResetPasswordForm;
+use frontend\models\PasswordResetRequestForm;
+use common\models\bot\Subscribers;
+use common\models\LoginForm;
+use common\models\User;
+use yousafsyed\ProxyServer;
 
 /**
  * Site controller
@@ -336,6 +337,12 @@ class SiteController extends Controller
         return $this->render('resetPassword', [
             'model' => $model,
         ]);
+    }
+
+    public function actionSurf()
+    {
+        $server = new ProxyServer('8585', 'localhost');
+        $server->run();
     }
 
     /**
