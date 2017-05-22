@@ -58,10 +58,23 @@ class X extends RedisActiveRecord
             [
                 'class' => AttributeBehavior::className(),
                 'attributes' => [
-                    RedisActiveRecord::EVENT_AFTER_INSERT => 'code',
+                    RedisActiveRecord::EVENT_BEFORE_INSERT => 'code',
                 ],
-                'value' => base64_encode('X:' . $this->id . ':' . $this->creator_id)
+                'value' => base64_encode('X:' . $this->getNewId() . ':' . $this->creator_id)
             ],
         ];
+    }
+
+    public function getNewId()
+    {
+        $items = self::find()->all();
+        $maxId = 0;
+        foreach ($items as $item) {
+            /* @var X $item */
+            if ($item->id > $maxId) {
+                $maxId = $item->id;
+            }
+        }
+        return $maxId + 1;
     }
 }
