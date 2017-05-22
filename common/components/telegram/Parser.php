@@ -148,6 +148,8 @@ class Parser extends Model
 
         if (isset($this->update->message->text)) {
             $translations = Json::decode($this->bot->translations);
+            var_dump($translations, $translations[$this->update->message->text]);
+            exit();
             if (isset($translations[$this->update->message->text])) {
                 $textWords = explode(' ', $translations[$this->update->message->text]);
             } else {
