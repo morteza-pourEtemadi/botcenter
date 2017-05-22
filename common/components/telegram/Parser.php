@@ -164,8 +164,7 @@ class Parser extends Model
         if (empty($textWords) === false) {
             $pattern = $textWords[0];
         }
-        var_dump($pattern, explode(' ', $translations[$this->update->message->text]));
-        exit();
+
         $commandIndex = array_search($pattern, $patterns, false);
         if ($commandIndex === false) {
             if ($this->getReplyCommand()) {
@@ -177,6 +176,8 @@ class Parser extends Model
         }
 
         $command = $commands[$commandIndex];
+        var_dump($command);
+        exit();
         $command->run();
         return true;
     }
