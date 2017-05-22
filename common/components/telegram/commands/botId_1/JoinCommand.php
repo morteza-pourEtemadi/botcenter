@@ -60,6 +60,7 @@ class JoinCommand extends CommandLocal
 
                 $item->caption = isset($this->update->message->caption) ? $this->update->message->caption : '';
                 $item->save();
+                $item->setCode();
                 // Update User Info
                 $user->XsNo += 1;
                 $user->save();

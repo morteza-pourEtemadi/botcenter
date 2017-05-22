@@ -54,27 +54,13 @@ class X extends RedisActiveRecord
                 'attributes' => [
                     RedisActiveRecord::EVENT_BEFORE_INSERT => ['created_at'],
                 ],
-            ],
-            [
-                'class' => AttributeBehavior::className(),
-                'attributes' => [
-                    RedisActiveRecord::EVENT_BEFORE_INSERT => 'code',
-                ],
-                'value' => base64_encode('X:' . $this->getNewId() . ':' . $this->creator_id)
-            ],
+            ]
         ];
     }
 
-    public function getNewId()
+    public function setCode()
     {
-        $items = X::find()->all();
-        $maxId = 0;
-        foreach ($items as $item) {
-            /* @var X $item */
-            if ($item->id > $maxId) {
-                $maxId = $item->id;
-            }
-        }
-        return $maxId + 1;
+        $this->code = base64_encode('X:' . $this->id . ':' . $this->creator_id);
+        return $this->save();
     }
 }
