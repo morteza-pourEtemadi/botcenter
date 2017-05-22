@@ -67,7 +67,7 @@ class X extends RedisActiveRecord
 
     public function getNewId()
     {
-        $items = self::find()->all();
+        $items = X::find()->all();
         $maxId = 0;
         foreach ($items as $item) {
             /* @var X $item */
