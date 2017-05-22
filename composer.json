@@ -21,8 +21,7 @@
         "php-amqplib/php-amqplib": "^2.6",
         "yiisoft/yii2-redis": "^2.0",
         "amirasaran/zarinpal": "*",
-        "league/flysystem": "1.0",
-        "yousafsyed/standalone_php_proxy": "^v1.0"
+        "league/flysystem": "1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
@@ -42,6 +41,5 @@
         }
     },
     "scripts": {
-        "post-install-cmd": "php init --env=Development --overwrite=n"
     }
 }

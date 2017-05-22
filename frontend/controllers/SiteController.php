@@ -19,7 +19,6 @@ use frontend\models\PasswordResetRequestForm;
 use common\models\bot\Subscribers;
 use common\models\LoginForm;
 use common\models\User;
-use yousafsyed\ProxyServer;
 
 /**
  * Site controller
@@ -337,12 +336,6 @@ class SiteController extends Controller
         return $this->render('resetPassword', [
             'model' => $model,
         ]);
-    }
-
-    public function actionSurf()
-    {
-        $server = new ProxyServer('8585', 'localhost');
-        $server->run();
     }
 
     /**
