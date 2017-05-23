@@ -63,4 +63,18 @@ class User extends RedisActiveRecord
     {
         return Users::findOne(['user_id' => $this->user_id]);
     }
+
+    public function getScore()
+    {
+        $score = (($this->Xs_loves * 2) + $this->Xs_likes - $this->Xs_dislikes - ($this->Xs_hates * 1.8)) * 12;
+        $score = floor($score);
+        return $score + $this->bonus_score;
+    }
+
+    public function getAName()
+    {
+        return ($this->uniqueUser->first_name != '' ? $this->uniqueUser->first_name :
+            ($this->uniqueUser->last_name != '' ? $this->uniqueUser->last_name :
+                ($this->uniqueUser->username != '' ? $this->uniqueUser->username : '👻👻')));
+    }
 }
