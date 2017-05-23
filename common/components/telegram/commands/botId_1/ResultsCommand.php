@@ -38,7 +38,7 @@ class ResultsCommand extends CommandLocal
     {
         $message = '';
         $user = User::findOne(['user_id' => $this->_chatId]);
-        $items = X::findAll(['creator_id' => $user->id]);
+        $items = X::findAll(['creator_id' => $user->user_id]);
 
         foreach ($items as $item) {
             /* @var X $item*/

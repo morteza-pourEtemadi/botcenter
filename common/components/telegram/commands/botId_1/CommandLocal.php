@@ -54,6 +54,17 @@ abstract class CommandLocal extends Command
         return $key;
     }
 
+    public function whichItem()
+    {
+        $key = [];
+        $ids = $this->getCache()['wci_ids'];
+        foreach ($ids as $item) {
+            $key[] = InlineKeyboardButton::setNewKeyButton($item['caption'], '/voteLink ' . $item['id']);
+        }
+
+        return $key;
+    }
+
     /**
      * Sets inline keyboard based on the parts, decorations and with pagination
      * @param $part
