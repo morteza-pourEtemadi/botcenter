@@ -33,11 +33,13 @@ class VoteLinkCommand extends CommandLocal
             $this->setPartKeyboard('competition');
             $this->sendMessage($message);
         } else {
-            $items = X::findAll(['creator_id' => $this->_chatId]);
+            $i = 0;
             $ids = [];
+            $items = X::findAll(['creator_id' => $this->_chatId]);
             foreach ($items as $item) {
-                $ids[]['id'] = $item->id;
-                $ids[]['caption'] = $item->caption != '' ? $item->caption : Yii::t('app_1', 'No Caption');
+                $ids[$i]['id'] = $item->id;
+                $ids[$i]['caption'] = $item->caption != '' ? $item->caption : Yii::t('app_1', 'No Caption');
+                $i++;
             }
             $this->setCache(['wci_ids' => $ids]);
             $this->setPartKeyboard('whichItem');
