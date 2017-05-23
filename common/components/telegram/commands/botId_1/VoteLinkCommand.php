@@ -37,7 +37,7 @@ class VoteLinkCommand extends CommandLocal
             $ids = [];
             foreach ($items as $item) {
                 $ids[]['id'] = $item->id;
-                $ids[]['caption'] = $item->caption;
+                $ids[]['caption'] = $item->caption != '' ? $item->caption : Yii::t('app_1', 'No Caption');
             }
             $this->setCache(['wci_ids' => $ids]);
             $this->setPartKeyboard('whichItem');
