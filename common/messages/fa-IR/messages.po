@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 msgctxt "app"
@@ -84,8 +84,24 @@ msgid "there was a problem to send email verification code. please try later."
 msgstr ""
 
 msgctxt "app_1"
+msgid " rank "
+msgstr ""
+
+msgctxt "app_1"
+msgid " with score "
+msgstr ""
+
+msgctxt "app_1"
 msgid "About Us"
 msgstr "درباره ما"
+
+msgctxt "app_1"
+msgid "Back to main menu"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Contest Menu"
+msgstr ""
 
 msgctxt "app_1"
 msgid "English"
@@ -94,6 +110,14 @@ msgstr "English"
 msgctxt "app_1"
 msgid "Farsi"
 msgstr "فارسی"
+
+msgctxt "app_1"
+msgid "Forward above message to your friends. So they can vote for your clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Get Vote Link"
+msgstr ""
 
 msgctxt "app_1"
 msgid "Guide"
@@ -115,8 +139,16 @@ msgid "Invite Friends"
 msgstr "دعوت از دوستان"
 
 msgctxt "app_1"
-msgid "Join Contest"
-msgstr "شرکت در مسابقه"
+msgid "No Caption"
+msgstr ""
+
+msgctxt "app_1"
+msgid "No text"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Now enter a caption"
+msgstr ""
 
 msgctxt "app_1"
 msgid "Please choose your language"
@@ -125,12 +157,152 @@ msgstr ""
 "(please choose your language)"
 
 msgctxt "app_1"
+msgid "Please just send a Video. Pay attention to your file`s format."
+msgstr ""
+
+msgctxt "app_1"
+msgid ""
+"Please send a dubsmash clip to join the contest. Please notice that sent "
+"«File» must be a video!"
+msgstr ""
+
+msgctxt "app_1"
+msgid ""
+"Please vote for my clip. It`s an exciting competition with great prizes\n"
+"\n"
+"Click the following link to watch my dubsmash and vote for it\n"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Results"
 msgstr "مشاهده نتایج"
 
 msgctxt "app_1"
+msgid "Send a clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Show detailed results"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Something went wrong. There is no file with this link!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "This item score:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Top 10"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Upgrade to premium"
 msgstr "ارتقاء به نسخه ویژه"
+
+msgctxt "app_1"
+msgid "Vote for this please!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "What can I do for you?"
+msgstr ""
+
+msgctxt "app_1"
+msgid ""
+"You earned 15 points for joining via invite link and person who invited you "
+"gained 50 points"
+msgstr ""
+
+msgctxt "app_1"
+msgid ""
+"You got to your limits of sending file. \n"
+"                If you are not a premium user, you can send more files with "
+"being premium; \n"
+"                And if you are already a premium user, it`s the end.\n"
+"Please read the guides for more information"
+msgstr ""
+
+msgctxt "app_1"
+msgid "You have not participate in competition yet. Please join the contest!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "You have used the bot before. So this invitation is not count!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Your clip is saved. Now it is participated in competition."
+msgstr ""
+
+msgctxt "app_1"
+msgid "cancel"
+msgstr ""
+
+msgctxt "app_1"
+msgid "click the button to watch the clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid "dislike "
+msgstr ""
+
+msgctxt "app_1"
+msgid "guide message"
+msgstr ""
+
+msgctxt "app_1"
+msgid "hate "
+msgstr ""
+
+msgctxt "app_1"
+msgid "like "
+msgstr ""
+
+msgctxt "app_1"
+msgid "love "
+msgstr ""
+
+msgctxt "app_1"
+msgid "number of dislikes:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "number of hates:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "number of likes:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "number of loves:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "show clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid "which item you need link for?"
+msgstr ""
+
+msgctxt "app_1"
+msgid "your rank"
+msgstr ""
+
+msgctxt "app_1"
+msgid "your score"
+msgstr ""
+
+msgctxt "app_1"
+msgid "your total score is:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "⚠️"
+msgstr ""
 
 msgctxt "app_bot"
 msgid ""
@@ -168,3 +340,164 @@ msgstr "حق اشتراک این ربات برای مدت {vt}، مبلغ {price
 msgctxt "app_bot"
 msgid "week"
 msgstr "هفته"
+
+msgctxt "app_site"
+msgid "A Few Steps to Get Your Favorite Product!"
+msgstr "تنها چند قدم تا دریافت محصول مورد علاقه خود فاصله دارید!"
+
+msgctxt "app_site"
+msgid "About"
+msgstr "درباره ما"
+
+msgctxt "app_site"
+msgid ""
+"All the services use the last version of technologies. We are up-to-date!"
+msgstr "تمام خدمات ما از آخرین تکنولوژی ها استفاده می کنند. ما به روز هستیم!"
+
+msgctxt "app_site"
+msgid "Amirkabir University of Technology Energy Systems Group"
+msgstr "گروه سیستم های انرژی دانشگاه صنعتی امیرکبیر"
+
+msgctxt "app_site"
+msgid "At Your Service"
+msgstr "در خدمت شما!"
+
+msgctxt "app_site"
+msgid "AutMav Group"
+msgstr "گروه ریز پرنده های دانشگاه امیرکبیر"
+
+msgctxt "app_site"
+msgid "Cake Sara Bot"
+msgstr "ربات «کیک سرا»"
+
+msgctxt "app_site"
+msgid "Find Out More"
+msgstr "درباره ما بیشتر بدانید"
+
+msgctxt "app_site"
+msgid "Fun Zaban Bot"
+msgstr "ربات «فان زبان»"
+
+msgctxt "app_site"
+msgid "GET STARTED!"
+msgstr "شروع کنیم؟!"
+
+msgctxt "app_site"
+msgid "Gebeer Leather Shop"
+msgstr "فروشگاه چرم جبیر"
+
+msgctxt "app_site"
+msgid "Iran DubeSmash Bot"
+msgstr "ربات «ایران دابسمش»"
+
+msgctxt "app_site"
+msgid "Let's Get In Touch!"
+msgstr "در تماس باشیم"
+
+msgctxt "app_site"
+msgid "Made with Love"
+msgstr "ساخته شده با عشق"
+
+msgctxt "app_site"
+msgid "Order Now!"
+msgstr "همین الان سفارش دهید!"
+
+msgctxt "app_site"
+msgid ""
+"Our services are ready to use as fast as it possible. Our programmers` speed "
+"is maniac!"
+msgstr ""
+"سرویس های ما با بیشترین سرعت ممکن، آماده استفاده می شود. سرعت برنامه نویس "
+"های ما دیوانه وار است"
+
+msgctxt "app_site"
+msgid "Ready to Ship"
+msgstr "آماده بهره برداری"
+
+msgctxt "app_site"
+msgid ""
+"Ready to start your next project with us? That's great! Give us a text or "
+"send us an email and we will get back to you as soon as possible!"
+msgstr ""
+"آماده اید که پروژه خود را به ما بسپارید؟ عالیه! با ارسال پیامک و یا ایمیل و "
+"یا پیام تلگرام، ما را در جریان بگذارید. به زودی با شما تماس می گیریم."
+
+msgctxt "app_site"
+msgid "Services"
+msgstr "خدمات و محصولات"
+
+msgctxt "app_site"
+msgid ""
+"Services you get here are all cheapest in the market, but they are all first "
+"rate"
+msgstr ""
+"تمام خدماتی که شما دریافت می کنید، درجه یک و بی رقیب هستند. در عین حال برای "
+"رعایت حال مشتری، نسبت به بازار ارزان ترند"
+
+msgctxt "app_site"
+msgid "Social: "
+msgstr ": شبکه های اجتماعی"
+
+msgctxt "app_site"
+msgid "Telegram Bot"
+msgstr "ربات تلگرام"
+
+msgctxt "app_site"
+msgid ""
+"Ultimate Developer has everything you need to make your business online and "
+"run it in no time! All the services in Ultimate Developer are cheap, user-"
+"friendly and easy to run and use. Want to test it?!"
+msgstr ""
+"«توسعه نهایی» برای آنلاین کردن کسب و کار شما و راه اندازی آن در کمترین زمان "
+"ممکن، همه چیز را در اختیار دارد"
+
+msgctxt "app_site"
+msgid "Ultimate Developers"
+msgstr "توسعه نهایی"
+
+msgctxt "app_site"
+msgid ""
+"Ultimate Developers can help you build your work websites, do your "
+"programming home-works, build telegram bots, etc!\n"
+" Just decide to make change in your life and get Online!"
+msgstr ""
+"تیم «توسعه نهایی» به شما کمک می کند که برای کسب و کارتان، وبسایت بسازید، "
+"تکالیف برنامه نویسی تان را انجام بدهید، ربات تلگرام بسازید و ...\n"
+"تنها باید تصمیم بگیرید که زندگی تان را عوض کنید و آنلاین شوید"
+
+msgctxt "app_site"
+msgid "Up to Date"
+msgstr "به روز"
+
+msgctxt "app_site"
+msgid "Valuable but cheap"
+msgstr "قیمتی ولی ارزان"
+
+msgctxt "app_site"
+msgid "We've got what you need!"
+msgstr "آن چیزی که شما نیاز دارید، در اختیار ماست!"
+
+msgctxt "app_site"
+msgid "Website Design"
+msgstr "طراحی وب سایت"
+
+msgctxt "app_site"
+msgid "YOUR FAVORITE SOURCE OF PHP CODES"
+msgstr "مخزن مورد علاقه شما از کدهای خوب"
+
+msgctxt "app_site"
+msgid "You have to do your works with Love these days. We too!"
+msgstr ""
+"این روزها، باید کارتان را با عشق انجام دهید. ما هم همین کار را می کنیم!"
+
+msgctxt "app_site"
+msgid "contact"
+msgstr "تماس با ما"
+
+msgctxt "app_site"
+msgid "portfolio"
+msgstr "نمونه کارها"
+
+#~ msgctxt "app_1"
+#~ msgid "Join Contest"
+#~ msgstr "شرکت در مسابقه"

@@ -75,7 +75,23 @@ msgid "there was a problem to send email verification code. please try later."
 msgstr ""
 
 msgctxt "app_1"
+msgid " rank "
+msgstr ""
+
+msgctxt "app_1"
+msgid " with score "
+msgstr ""
+
+msgctxt "app_1"
 msgid "About Us"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Back to main menu"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Contest Menu"
 msgstr ""
 
 msgctxt "app_1"
@@ -84,6 +100,14 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "Farsi"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Forward above message to your friends. So they can vote for your clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Get Vote Link"
 msgstr ""
 
 msgctxt "app_1"
@@ -99,7 +123,15 @@ msgid "Invite Friends"
 msgstr ""
 
 msgctxt "app_1"
-msgid "Join Contest"
+msgid "No Caption"
+msgstr ""
+
+msgctxt "app_1"
+msgid "No text"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Now enter a caption"
 msgstr ""
 
 msgctxt "app_1"
@@ -107,11 +139,139 @@ msgid "Please choose your language"
 msgstr ""
 
 msgctxt "app_1"
+msgid "Please just send a Video. Pay attention to your file`s format."
+msgstr ""
+
+msgctxt "app_1"
+msgid "Please send a dubsmash clip to join the contest. Please notice that sent «File» must be a video!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Please vote for my clip. It`s an exciting competition with great prizes\n\nClick the following link to watch my dubsmash and vote for it\n"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Results"
 msgstr ""
 
 msgctxt "app_1"
+msgid "Send a clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Show detailed results"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Something went wrong. There is no file with this link!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "This item score:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Top 10"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Upgrade to premium"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Vote for this please!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "What can I do for you?"
+msgstr ""
+
+msgctxt "app_1"
+msgid "You earned 15 points for joining via invite link and person who invited you gained 50 points"
+msgstr ""
+
+msgctxt "app_1"
+msgid "You got to your limits of sending file. \n                If you are not a premium user, you can send more files with being premium; \n                And if you are already a premium user, it`s the end.\nPlease read the guides for more information"
+msgstr ""
+
+msgctxt "app_1"
+msgid "You have not participate in competition yet. Please join the contest!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "You have used the bot before. So this invitation is not count!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Your clip is saved. Now it is participated in competition."
+msgstr ""
+
+msgctxt "app_1"
+msgid "cancel"
+msgstr ""
+
+msgctxt "app_1"
+msgid "click the button to watch the clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid "dislike "
+msgstr ""
+
+msgctxt "app_1"
+msgid "guide message"
+msgstr ""
+
+msgctxt "app_1"
+msgid "hate "
+msgstr ""
+
+msgctxt "app_1"
+msgid "like "
+msgstr ""
+
+msgctxt "app_1"
+msgid "love "
+msgstr ""
+
+msgctxt "app_1"
+msgid "number of dislikes:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "number of hates:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "number of likes:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "number of loves:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "show clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid "which item you need link for?"
+msgstr ""
+
+msgctxt "app_1"
+msgid "your rank"
+msgstr ""
+
+msgctxt "app_1"
+msgid "your score"
+msgstr ""
+
+msgctxt "app_1"
+msgid "your total score is:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "⚠️"
 msgstr ""
 
 msgctxt "app_bot"
@@ -140,5 +300,137 @@ msgstr ""
 
 msgctxt "app_bot"
 msgid "week"
+msgstr ""
+
+msgctxt "app_site"
+msgid "A Few Steps to Get Your Favorite Product!"
+msgstr ""
+
+msgctxt "app_site"
+msgid "About"
+msgstr ""
+
+msgctxt "app_site"
+msgid "All the services use the last version of technologies. We are up-to-date!"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Amirkabir University of Technology Energy Systems Group"
+msgstr ""
+
+msgctxt "app_site"
+msgid "At Your Service"
+msgstr ""
+
+msgctxt "app_site"
+msgid "AutMav Group"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Cake Sara Bot"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Find Out More"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Fun Zaban Bot"
+msgstr ""
+
+msgctxt "app_site"
+msgid "GET STARTED!"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Gebeer Leather Shop"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Iran DubeSmash Bot"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Let's Get In Touch!"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Made with Love"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Order Now!"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Our services are ready to use as fast as it possible. Our programmers` speed is maniac!"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Ready to Ship"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Ready to start your next project with us? That's great! Give us a text or send us an email and we will get back to you as soon as possible!"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Services"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Services you get here are all cheapest in the market, but they are all first rate"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Social: "
+msgstr ""
+
+msgctxt "app_site"
+msgid "Telegram Bot"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Ultimate Developer has everything you need to make your business online and run it in no time! All the services in Ultimate Developer are cheap, user-friendly and easy to run and use. Want to test it?!"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Ultimate Developers"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Ultimate Developers can help you build your work websites, do your programming home-works, build telegram bots, etc!\n Just decide to make change in your life and get Online!"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Up to Date"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Valuable but cheap"
+msgstr ""
+
+msgctxt "app_site"
+msgid "We've got what you need!"
+msgstr ""
+
+msgctxt "app_site"
+msgid "Website Design"
+msgstr ""
+
+msgctxt "app_site"
+msgid "YOUR FAVORITE SOURCE OF PHP CODES"
+msgstr ""
+
+msgctxt "app_site"
+msgid "You have to do your works with Love these days. We too!"
+msgstr ""
+
+msgctxt "app_site"
+msgid "contact"
+msgstr ""
+
+msgctxt "app_site"
+msgid "portfolio"
 msgstr ""
 
