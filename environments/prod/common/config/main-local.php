@@ -38,8 +38,8 @@ return [
         ],
         'zarinpal' => [
             'class' => 'amirasaran\zarinpal\Zarinpal',
-            'merchant_id' => 'e6532f90-9e7a-11e6-b311-000c295eb8fc',
-            'callback_url' => 'http://redis.botcenterbot.loc/payment/bots'
+            'merchant_id' => '54637a2a-4214-11e7-8d8b-005056a205be',
+            'callback_url' => 'https://ultimatedevelopers.ir/payment/bots'
         ],
     ],
 ];

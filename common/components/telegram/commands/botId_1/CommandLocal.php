@@ -2,11 +2,11 @@
 
 namespace common\components\telegram\commands\botId_1;
 
-use common\components\telegram\types\keyboards\InlineKeyboardButton;
 use yii;
 use common\components\TelegramBot;
 use common\components\telegram\commands\Command;
 use common\components\telegram\types\keyboards\KeyboardButton;
+use common\components\telegram\types\keyboards\InlineKeyboardButton;
 
 /**
  * Telegram Command Core for Local Purposes
@@ -61,6 +61,7 @@ abstract class CommandLocal extends Command
         foreach ($ids as $item) {
             $key[] = InlineKeyboardButton::setNewKeyButton($item['caption'], '/voteLink ' . $item['id']);
         }
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'back to menu'), '/competition');
 
         return $key;
     }
@@ -81,11 +82,11 @@ abstract class CommandLocal extends Command
             $endButton = end($key);
             $n = count($key) - 1;
             unset($key[$n]);
-            $limit = count($key) > $page * self::ITEM_PER_PAGE ? $page * self::ITEM_PER_PAGE : count($key) - 1;
+            $limit = count($key) > $page * self::ITEM_PER_PAGE ? $page * self::ITEM_PER_PAGE : count($key);
             for ($i = ($page - 1) * self::ITEM_PER_PAGE; $i < $limit; $i++) {
                 $selectedKeys[] = $key[$i];
             }
-            $pagination = $this->createPagination($selectedKeys, $page, $part);
+            $pagination = $this->createPagination($key, $page, $part);
         } else {
             $selectedKeys = $key;
         }
