@@ -114,6 +114,10 @@
         </div>
     </section>
 
+    <div class="trustcode">
+        <br>
+        <script src="https://www.zarinpal.com/webservice/TrustCode" type="text/javascript"></script>
+    </div>
     <section id="services">
         <div class="container">
             <div class="row">
