@@ -4,6 +4,7 @@ namespace common\components\telegram\commands\botId_1;
 
 use Yii;
 use yii\helpers\Json;
+use common\models\bot\botId_1\X;
 use common\models\bot\Subscribers;
 use common\models\bot\botId_1\User;
 
@@ -70,6 +71,17 @@ class StartCommand extends CommandLocal
             }
             $inputParts = explode(':', $payload);
             if ($inputParts[0] == 'X') {
+                if ($newUser) {
+                    $user->bonus_score = 15;
+                    $user->save();
+                    $item = X::findOne(['code' => ($input[1] == 'lang' ? $input[3] : $input[1])]);
+                    $caller = User::findOne(['user_id' => $item->creator_id]);
+                    $caller->bonus_score += 30;
+                    $caller->save();
+
+                    $this->killKeyboard();
+                    $this->sendMessage(Yii::t('app_1', 'You earned {up} points for joining via invite link and person who invited you gained {cp} points', ['up' => 15, 'cp' => 30]));
+                }
                 $this->setCache(['code' => ($input[1] == 'lang' ? $input[3] : $input[1])]);
                 $this->setPartKeyboard('showItemStart');
                 $this->sendMessage(Yii::t('app_1', 'click the button to watch the clip'));
@@ -84,7 +96,7 @@ class StartCommand extends CommandLocal
                     $caller->save();
 
                     $this->setMainKeyboard();
-                    $this->sendMessage(Yii::t('app_1', 'You earned 15 points for joining via invite link and person who invited you gained 50 points'));
+                    $this->sendMessage(Yii::t('app_1', 'You earned {up} points for joining via invite link and person who invited you gained {cp} points', ['up' => 15, 'cp' => 50]));
                 } else {
                     $this->setMainKeyboard();
                     $this->sendMessage(Yii::t('app_1', 'You have used the bot before. So this invitation is not count!'));

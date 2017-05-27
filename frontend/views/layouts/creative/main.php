@@ -95,8 +95,8 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading"><?= Yii::t('app_site', 'YOUR FAVORITE SOURCE OF PHP CODES') ?></h1>
                 <hr>
-                <p><?= Yii::t('app_site', "Ultimate Developers can help you build your work websites, do your programming home-works, build telegram bots, etc!\n Just decide to make change in your life and get Online!") ?></p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll"><?= Yii::t('app_site', 'Find Out More') ?></a>
+                <h3><?= Yii::t('app_site', "Ultimate Developers can help you build your work websites, do your programming home-works, build telegram bots, etc!\n Just decide to make change in your life and get Online!") ?></h3>
+                <br><a href="#about" class="btn btn-primary btn-xl page-scroll"><?= Yii::t('app_site', 'Find Out More') ?></a>
             </div>
         </div>
     </header>
@@ -107,8 +107,8 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading"><?= Yii::t('app_site', 'We\'ve got what you need!') ?></h2>
                     <hr class="light">
-                    <p class="text-faded"><?= Yii::t('app_site', 'Ultimate Developer has everything you need to make your business online and run it in no time! All the services in Ultimate Developer are cheap, user-friendly and easy to run and use. Want to test it?!') ?></p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button"><?= Yii::t('app_site', 'GET STARTED!') ?></a>
+                    <p id="everything" class="text-faded"><?= Yii::t('app_site', 'Ultimate Developer has everything you need to make your business online and run it in no time! All the services in Ultimate Developer are cheap, user-friendly and easy to run and use. Want to test it?!') ?></p>
+                    <br><a href="#services" class="page-scroll btn btn-default btn-xl sr-button"><?= Yii::t('app_site', 'GET STARTED!') ?></a>
                 </div>
             </div>
         </div>
@@ -297,7 +297,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading"><?= Yii::t('app_site', 'Let\'s Get In Touch!') ?></h2>
                     <hr class="primary">
-                    <p><?= Yii::t('app_site', 'Ready to start your next project with us? That\'s great! Give us a text or send us an email and we will get back to you as soon as possible!') ?></p>
+                    <h3><?= Yii::t('app_site', 'Ready to start your next project with us? That\'s great! Give us a text or send us an email and we will get back to you as soon as possible!') ?></h3>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fa fa-mobile fa-3x sr-contact"></i>

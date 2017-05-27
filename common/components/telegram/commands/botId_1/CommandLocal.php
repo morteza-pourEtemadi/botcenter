@@ -61,7 +61,7 @@ abstract class CommandLocal extends Command
         foreach ($ids as $item) {
             $key[] = InlineKeyboardButton::setNewKeyButton($item['caption'], '/voteLink ' . $item['id']);
         }
-        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'back to menu'), '/competition');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'back to menu'), '/contestMenu');
 
         return $key;
     }
