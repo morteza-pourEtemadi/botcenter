@@ -38,6 +38,9 @@ class UpgradeCommand extends CommandLocal
 
                 $this->setMainKeyboard();
                 $this->sendMessage(Yii::t('app_1', 'You have successfully upgraded to premium user. You are rewarded 10 coins for joining the league! enjoy...'));
+            } else {
+                $this->setMainKeyboard();
+                $this->sendMessage(Yii::t('app_1', 'Your account and one which requested the upgrade is not same. Please pay more attention'));
             }
             return true;
         }
