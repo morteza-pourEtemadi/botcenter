@@ -26,8 +26,10 @@ class InviteCommand extends CommandLocal
         $message = Yii::t('app_1', 'did you heard of dubesmash bot? That\'s fun. Come on and join the contest. You may win the great prizes also! Here is the link:');
         $message .= "\n\n" . $url;
 
-        $this->setMainKeyboard();
+        $this->killKeyboard();
         $this->sendMessage($message);
+        $this->setMainKeyboard();
+        $this->sendMessage(Yii::t('app_1', 'Forward above message to your friends. So they can join the contest via your invitation link!'));
         return true;
     }
 

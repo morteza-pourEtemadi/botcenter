@@ -4,8 +4,8 @@ namespace frontend\controllers;
 
 use yii;
 use yii\rest\Controller;
-use common\models\Bot\Bot;
-use common\models\Bot\Receipt;
+use common\models\bot\Bot;
+use common\models\bot\Receipt;
 use common\components\TelegramBot;
 use amirasaran\zarinpal\Zarinpal;
 
