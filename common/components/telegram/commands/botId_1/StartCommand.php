@@ -139,6 +139,10 @@ class StartCommand extends CommandLocal
 
     public function paymentRendering($input)
     {
+        if (isset($input[1]) == false) {
+            return false;
+        }
+
         $dataString = base64_decode($input[1]);
         $data = explode(':', $dataString);
 
