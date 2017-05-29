@@ -226,7 +226,7 @@ class Parser extends Model
 
         foreach ($marketing['price'] as $id => $price) {
             $time = $marketing['time'][$id];
-            $description = Yii::t('app_bot', 'the fee for this bot is {price} Rials for {vt}', ['price' => $price, 'vt' => $this->calcTime($time)]);
+            $description = Yii::t('app_bot', 'the fee for this bot is {price} Tomans for {vt}', ['price' => $price, 'vt' => $this->calcTime($time)]);
             $payId = implode(
                 '.ubpd.',
                 [

@@ -3,6 +3,8 @@
 namespace common\components\telegram\commands\botId_1;
 
 use yii;
+use yii\helpers\Url;
+use common\models\bot\botId_1\User;
 use common\components\TelegramBot;
 use common\components\telegram\commands\Command;
 use common\components\telegram\types\keyboards\KeyboardButton;
@@ -66,6 +68,24 @@ abstract class CommandLocal extends Command
         return $key;
     }
 
+    public function upgrade()
+    {
+        $price = $this->getCache()['price'];
+        $payId = $this->getCache()['payId'];
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Pay {price} Toman for upgrading.', ['price' => $price]), '', Url::to(['payment/receipt', 'pay_id' => $payId], true));
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'back to main menu'), '/start');
+
+        return $key;
+    }
+
+    public function getUpgrade()
+    {
+        $id = $this->getCache()['receipt'];
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Finish Upgrade Process'), '/upgrade ' . $id);
+
+        return $key;
+    }
+
     /**
      * Sets inline keyboard based on the parts, decorations and with pagination
      * @param $part
@@ -115,12 +135,18 @@ abstract class CommandLocal extends Command
     public function setMainKeyboard()
     {
         $key = [];
+        $user = User::findOne(['user_id' => $this->_chatId]);
+
         $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'Contest Menu') . ' 🏁');
         $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'Results') . ' 📊');
         $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'Invite Friends') . ' 👬👭');
         $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'Guide') . ' 📚');
         $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'About Us') . ' 🔖');
-        $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'Upgrade to premium') . ' 📤');
+        if ($user->type == User::TYPE_NORMAL) {
+            $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'Upgrade to premium') . ' 📤');
+        } else {
+            $key[] = KeyboardButton::setNewKeyButton('👸 ' . Yii::t('app_1', 'Premium Panel') . ' 🤴');
+        }
 
         $keyboard = [[$key[0]], [$key[1], $key[2]], [$key[3], $key[4]], [$key[5]]];
         $this->setKeyboard([

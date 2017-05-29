@@ -25,13 +25,16 @@ class StartCommand extends CommandLocal
      */
     public function execute()
     {
-//        var_dump(Users::deleteAll());
 //        var_dump(Subscribers::deleteAll());
 //        var_dump(User::deleteAll());
 //        $this->killCache();
 //        exit('123');
         $newUser = false;
         $input = explode(' ', $this->_messageText);
+        if ($this->paymentRendering($input)) {
+            return true;
+        }
+
         $user = User::findOne(['user_id' => $this->_chatId]);
         $subscriber = Subscribers::findOne(['user_id' => $this->_chatId, 'bot_id' => $this->bot->bot_id]);
 
@@ -132,6 +135,42 @@ class StartCommand extends CommandLocal
         $this->setCache(['prevCommand' => $prevInput]);
         $this->setPartKeyboard('language');
         $this->sendMessage(Yii::t('app_1', 'Please choose your language'));
+    }
+
+    public function paymentRendering($input)
+    {
+        $dataString = base64_decode($input[1]);
+        $data = explode(':', $dataString);
+
+        if ($data[0] == 'receipt') {
+            if ($data[1] == '!100') {
+                $this->sendMessage(Yii::t('app_1', 'There must be a problem. Please try again later!'));
+                return true;
+            }
+        } elseif ($data[0] == 'payStatus') {
+            $this->killKeyboard();
+            switch ($data[1]) {
+                case '100':
+                    $message = Yii::t('app_1', 'Payment done successfully!');
+                    $this->setCache(['receipt' => $data[2]]);
+                    $this->setPartKeyboard($data[3] == 'upgrade' ? 'getUpgrade' : 'getCoins');
+                    break;
+                case '101':
+                    $message = Yii::t('app_1', 'You are trying to verify your payment more than once. If your connection is slow, please be patient! Otherwise don`t');
+                    break;
+                case '1':
+                    $message = Yii::t('app_1', 'Payment process was canceled by yourself!');
+                    break;
+                case '0':
+                default:
+                    $message = Yii::t('app_1', 'An error occurred since operating your payment. If your credit does not came back to you after 24 hours please let us know!');
+                    break;
+            }
+            $this->sendMessage($message);
+            return true;
+        }
+
+        return false;
     }
 
     /**

@@ -4,7 +4,7 @@ namespace common\models\bot;
 
 use yii\redis\ActiveQuery;
 use yii\behaviors\TimestampBehavior;
-use common\component\RedisActiveRecord;
+use common\components\RedisActiveRecord;
 
 /**
  * Class Subscribers
@@ -17,6 +17,7 @@ use common\component\RedisActiveRecord;
  * @property string authority
  * @property integer price
  * @property integer time
+ * @property string product
  * @property string description
  * @property string redirect_url
  * @property integer created_at
@@ -40,6 +41,7 @@ class Receipt extends RedisActiveRecord
             'status',
             'price',
             'time',
+            'product',
             'authority',
             'description',
             'redirect_url',
@@ -55,7 +57,7 @@ class Receipt extends RedisActiveRecord
     {
         return [
             [['id', 'user_id', 'bot_id', 'status', 'price','time', 'created_at', 'updated_at'], 'integer'],
-            [['authority', 'description', 'redirect_url'], 'string'],
+            [['product', 'authority', 'description', 'redirect_url'], 'string'],
         ];
     }
 

@@ -35,18 +35,18 @@ class ApiController extends Controller
     {
         if ($this->getBot($tokenId, $tokenString) === null) {
             $trans = [
-                'Join Contest' . ' 🏁' => '/start',
-                'Results' . ' 📊' => '/start',
-                'Invite Friends' . ' 👬👭' => '/start',
-                'Guide' . ' 📚' => '/start',
-                'About Us' . ' 🔖' => '/start',
-                'Upgrade to premium' . ' 📤' => '/start',
-                'شرکت در مسابقه' . ' 🏁' => '/start',
-                'مشاهده نتایج' . ' 📊' => '/start',
-                'دعوت از دوستان' . ' 👬👭' => '/start',
-                'راهنما' . ' 📚' => '/start',
-                'درباره ما' . ' 🔖' => '/start',
-                'ارتقاء به نسخه ویژه' . ' 📤' => '/start',
+                'Join Contest' . ' 🏁' => '/contestMenu',
+                'Results' . ' 📊' => '/results',
+                'Invite Friends' . ' 👬👭' => '/invite',
+                'Guide' . ' 📚' => '/help',
+                'About Us' . ' 🔖' => '/about',
+                'Upgrade to premium' . ' 📤' => '/upgrade',
+                'شرکت در مسابقه' . ' 🏁' => '/contestMenu',
+                'مشاهده نتایج' . ' 📊' => '/results',
+                'دعوت از دوستان' . ' 👬👭' => '/invite',
+                'راهنما' . ' 📚' => '/help',
+                'درباره ما' . ' 🔖' => '/about',
+                'ارتقاء به نسخه ویژه' . ' 📤' => '/upgrade',
             ];
             $bot = new Bot([
                 'bot_id' => 1,
@@ -55,7 +55,7 @@ class ApiController extends Controller
                 'username' => 'iran_dubsmash_robot',
                 'token' => '350954048:AAH2zJy-YFZTPVybo18MHqzdyysPtBapuRo',
                 'type' => Bot::TYPE_IN_APP_PAYMENT,
-                'priceString' => '"[]"',
+                'priceString' => json_encode(['objects' => ['upgrade' => 2000]]),
                 'translations' => yii\helpers\Json::encode($trans),
             ]);
             var_dump($bot->save());

@@ -262,7 +262,7 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2><?= Yii::t('app_site', 'A Few Steps to Get Your Favorite Product!') ?></h2>
-                <a href="https://tlgrm.me/ultimate_developer" class="btn btn-default btn-xl sr-button"><span><?= Yii::t('app_site', 'Order Now!') ?></span></a>
+                <a href="https://tlgrm.me/ultimate_developer" class="btn btn-default btn-xl sr-button" target="_blank"><span><?= Yii::t('app_site', 'Order Now!') ?></span></a>
             </div>
         </div>
     </aside>
