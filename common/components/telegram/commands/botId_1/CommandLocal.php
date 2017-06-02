@@ -136,8 +136,8 @@ abstract class CommandLocal extends Command
         $id = $this->getCache()['id'];
         $cmd = $this->getCache()['cmd'];
         $plans = $this->getCache()['plans'];
-        foreach ($plans as $key => $plan) {
-            $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', '{d} for {t}', ['d' => $plan['coin'] . ' 💎', 't' => $this->calcTime($plan['time'])]), '/' . $cmd . ' ' . $id . ' ' . $key);
+        for ($i = 0; $i < 4; $i++) {
+            $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', '{d} for {t}', ['d' => $plans[$i]['coin'] . ' 💎', 't' => $this->calcTime($plans[$i]['time'])]), '/' . $cmd . ' ' . $id . ' ' . $i);
         }
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'cancel'), '/premium');
 

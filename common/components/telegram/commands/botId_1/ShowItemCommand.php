@@ -64,7 +64,7 @@ class ShowItemCommand extends CommandLocal
 
         $specials = $normals = [];
         foreach ($items as $item) {
-            if (array_search($item->id, $seen, false) == false) {
+            if (array_search($item->id, $seen, false) === false) {
                 $spec = Json::decode($item->specialOptions);
                 if ($spec != [] && isset($spec['top']['time']) && $spec['top']['time'] > time()) {
                     $specials[] = $item;
