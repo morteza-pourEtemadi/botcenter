@@ -55,7 +55,29 @@ class ApiController extends Controller
                 'username' => 'iran_dubsmash_robot',
                 'token' => '350954048:AAH2zJy-YFZTPVybo18MHqzdyysPtBapuRo',
                 'type' => Bot::TYPE_IN_APP_PAYMENT,
-                'priceString' => json_encode(['objects' => ['upgrade' => 2000]]),
+                'priceString' => json_encode([
+                    'objects' => [
+                        'upgrade' => 2000,
+                        'coins' => [
+                            0 => [
+                                'price' => 100,
+                                'count' => 50
+                            ],
+                            1 => [
+                                'price' => 100,
+                                'count' => 100
+                            ],
+                            2 => [
+                                'price' => 100,
+                                'count' => 200
+                            ],
+                            3 => [
+                                'price' => 100,
+                                'count' => 1000
+                            ],
+                        ]
+                    ]
+                ]),
                 'translations' => yii\helpers\Json::encode($trans),
             ]);
             var_dump($bot->save());

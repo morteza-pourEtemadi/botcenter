@@ -25,7 +25,9 @@ class PremiumCommand extends CommandLocal
         $user = User::findOne(['user_id' => $this->_chatId]);
         if ($user->type == User::TYPE_PREMIUM) {
             $this->setPartKeyboard('premiumPanel');
-            $this->sendMessage(Yii::t('app_1', 'What can I do for you?'));
+            $message = Yii::t('app_1', 'Your have {d} diamonds', ['d' => $user->coins]) . "\n\n\n";
+            $message .= Yii::t('app_1', 'What can I do for you?');
+            $this->sendMessage($message);
         } else {
             $this->setPartKeyboard('getPremium');
             $this->sendMessage(Yii::t('app_1', 'You are a normal user. To use premium features, please upgrade your account first'));
