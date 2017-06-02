@@ -3,6 +3,7 @@
 namespace common\components;
 
 use common\components\telegram\types\Chat;
+use phpDocumentor\Reflection\Types\Null_;
 use yii;
 use yii\base\Component;
 use yii\base\InvalidParamException;
@@ -78,14 +79,18 @@ class TelegramBot extends Component
     /**
      * Get chat updates include updated name and username of the user
      * @param $chatId
-     * @return Chat
+     * @return Chat|Null
      */
     public function getChat($chatId)
     {
         $params = [
             'chat_id' => $chatId
         ];
-        return $this->post('getChat', $params);
+        $response = $this->post('getChat', $params);
+        if ($response->ok == true) {
+            return $response->result;
+        }
+        return null;
     }
 
     /**

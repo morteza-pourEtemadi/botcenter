@@ -85,7 +85,7 @@ class ResultsCommand extends CommandLocal
         foreach ($users as $user) {
             /* @var User $user */
             if ($i <= 10) {
-                $topRanks .= '🏅' . Yii::t('app_1', ' rank ') . (string) $i . ' « ' . $user->type == User::TYPE_PREMIUM ? '👑 ' : '' . $user->getAName() . ' » ' . Yii::t('app_1', ' with score ') . $user->getScore() . "\n\n";
+                $topRanks .= '🏅' . Yii::t('app_1', ' rank ') . (string) $i . ' « ' . ($user->type == User::TYPE_PREMIUM ? '👑 ' : '') . $user->getAName() . ' » ' . Yii::t('app_1', ' with score ') . $user->getScore() . "\n\n";
             }
             if ($user->user_id == $this->_chatId) {
                 $rank = $i;
