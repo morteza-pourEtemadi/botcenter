@@ -507,7 +507,7 @@ abstract class Command extends Component
 
     public function puringText($text)
     {
-        return mb_substr($text, 0, 1) == '/' ? Yii::t('app_1', 'No text') : $text;
+        return mb_substr($text, 0, 1) == '/' ? Yii::t('app_bot', 'No text') : $text;
     }
 
     /**
@@ -668,9 +668,29 @@ abstract class Command extends Component
     public function language()
     {
         $prevInput = $this->getCache()['prevCommand'] ? ' ' . $this->getCache()['prevCommand'] : '';
-        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Farsi') . ' ' . self::E_FLAG_IR, '/start lang 1' . $prevInput);
-        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'English') . ' ' . self::E_FLAG_UK, '/start lang 2' . $prevInput);
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_bot', 'Farsi') . ' ' . self::E_FLAG_IR, '/start lang 1' . $prevInput);
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_bot', 'English') . ' ' . self::E_FLAG_UK, '/start lang 2' . $prevInput);
 
         return $key;
+    }
+
+    public function calcTime($time)
+    {
+        $hourLong = 3600;
+        $dayLong = 3600*24;
+        $weekLong = 3600*24*7;
+        $monthLong = 3600*24*30;
+        
+        $month = floor($time / ($monthLong));
+        $week = floor(($time - ($month * $monthLong)) / $weekLong);
+        $day = floor(($time - ($month * $monthLong) - ($week * $weekLong)) / $dayLong);
+        $hour = floor(($time - ($month * $monthLong) - ($week * $weekLong) - ($day * $dayLong)) / $hourLong);
+
+        $returnTime = $month > 0 ? $month . Yii::t('app_bot', 'month') : '';
+        $returnTime .= $week > 0 ? $week . Yii::t('app_bot', 'week') : '';
+        $returnTime .= $day > 0 ? $day . Yii::t('app_bot', 'day') : '';
+        $returnTime .= $hour > 0 ? $hour . Yii::t('app_bot', 'hour') : '';
+
+        return $returnTime;
     }
 }

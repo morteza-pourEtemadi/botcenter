@@ -30,17 +30,17 @@ class UpgradeCommand extends CommandLocal
             $receipt = Receipt::findOne(['id' => $input[1]]);
             if ($receipt->user_id == $this->_chatId) {
                 $user->type = User::TYPE_PREMIUM;
-                $user->coins = 10;
+                $user->coins = 25;
                 $user->save();
 
                 $receipt->status = Receipt::STATUS_PAYED_USED;
                 $receipt->save();
 
                 $this->setMainKeyboard();
-                $this->sendMessage(Yii::t('app_1', 'You have successfully upgraded to premium user. You are rewarded 10 coins for joining the league! enjoy...'));
+                $this->sendMessage(Yii::t('app_1', 'You have successfully upgraded to premium user. You are rewarded 25 diamonds for joining the league! enjoy...'));
             } else {
                 $this->setMainKeyboard();
-                $this->sendMessage(Yii::t('app_1', 'Your account and one which requested the upgrade is not same. Please pay more attention'));
+                $this->sendMessage(Yii::t('app_1', 'Your account and the one which requested the upgrade is not same. Please pay more attention'));
             }
             return true;
         }
@@ -64,7 +64,7 @@ class UpgradeCommand extends CommandLocal
         );
         $this->setCache(['payId' => $payId, 'price' => $price]);
         $this->setPartKeyboard('upgrade');
-        $this->sendMessage(Yii::t('app_1', 'Upgrading to premium lets you to send 6 clips instead of 2. So you have more chance to win. Also you can buy coins and speed up your score!'));
+        $this->sendMessage(Yii::t('app_1', 'Upgrading to premium lets you to send 6 clips instead of 2. So you have more chance to win. Also you can buy diamonds and speed up your score!'));
         return true;
     }
 

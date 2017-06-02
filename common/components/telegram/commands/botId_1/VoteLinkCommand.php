@@ -41,7 +41,7 @@ class VoteLinkCommand extends CommandLocal
                 $ids[$i]['caption'] = $item->caption != '' ? $item->caption : Yii::t('app_1', 'No Caption');
                 $i++;
             }
-            $this->setCache(['wci_ids' => $ids]);
+            $this->setCache(['wci_ids' => $ids, 'cmd' => 'voteLink', 'bck' => 'contestMenu']);
             $this->setPartKeyboard('whichItem');
             $this->sendMessage(Yii::t('app_1', 'which item you need link for?'));
         }

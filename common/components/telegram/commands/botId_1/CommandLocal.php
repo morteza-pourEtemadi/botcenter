@@ -4,6 +4,7 @@ namespace common\components\telegram\commands\botId_1;
 
 use yii;
 use yii\helpers\Url;
+use yii\helpers\Json;
 use common\models\bot\botId_1\User;
 use common\components\TelegramBot;
 use common\components\telegram\commands\Command;
@@ -37,6 +38,7 @@ abstract class CommandLocal extends Command
     public function competition()
     {
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Send a clip'), '/join');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Watch clips'), '/showItem');
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Get Vote Link'), '/voteLink');
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Show detailed results'), '/results detail');
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Back to main menu'), '/start');
@@ -47,10 +49,13 @@ abstract class CommandLocal extends Command
     public function voteItem()
     {
         $code = $this->getCache()['code'];
+        $spec = Json::decode($this->getCache()['spec']);
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'love ' . '❤️❤️'), '/vote 1 ' . $code);
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'like ' . '😍'), '/vote 2 ' . $code);
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'dislike ' . '😒'), '/vote 3 ' . $code);
-        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'hate ' . '🤢'), '/vote 4 ' . $code);
+        if (isset($spec['btn']) == false || $spec['btn']['time'] < time()) {
+            $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'hate ' . '🤢'), '/vote 4 ' . $code);
+        }
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', '⚠️' . ' report this ' . '⚠️'), '/vote 5 ' . $code);
 
         return $key;
@@ -60,10 +65,12 @@ abstract class CommandLocal extends Command
     {
         $key = [];
         $ids = $this->getCache()['wci_ids'];
+        $cmd = $this->getCache()['cmd'];
+        $bck = $this->getCache()['bck'];
         foreach ($ids as $item) {
-            $key[] = InlineKeyboardButton::setNewKeyButton($item['caption'], '/voteLink ' . $item['id']);
+            $key[] = InlineKeyboardButton::setNewKeyButton($item['caption'], '/' . $cmd . ' ' . $item['id']);
         }
-        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'back to menu'), '/contestMenu');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'back to menu'), '/' . $bck);
 
         return $key;
     }
@@ -82,6 +89,57 @@ abstract class CommandLocal extends Command
     {
         $id = $this->getCache()['receipt'];
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Finish Upgrade Process'), '/upgrade ' . $id);
+
+        return $key;
+    }
+
+    public function getCoins()
+    {
+        $id = $this->getCache()['receipt'];
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Get your Diamonds'), '/buyCoins ' . $id);
+
+        return $key;
+    }
+
+    public function getPremium()
+    {
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Upgrade to premium') . ' 📤', '/upgrade');
+        return $key;
+    }
+
+    public function premiumPanel()
+    {
+        $key[] = InlineKeyboardButton::setNewKeyButton('💎 ' . Yii::t('app_1', 'Buy Diamonds') . ' 💎', '/buyCoins');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Show in the top') . ' 📹⤴️', '/topShow');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'No hate button') . ' 💝', '/specBtn');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Back to main menu'), '/start');
+
+        return $key;
+    }
+
+    public function buyCoins()
+    {
+        $payId = $this->getCache()['payId'];
+        $count = $this->getCache()['count'];
+        $price = $this->getCache()['price'];
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', '{c} {d} {p} toman', ['c' => $count[0], 'd' => '💎', 'p' => $price[0]]), '', Url::to(['payment/receipt', 'pay_id' => $payId[0]], true));
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', '{c} {d} {p} toman', ['c' => $count[1], 'd' => '💎', 'p' => $price[1]]), '', Url::to(['payment/receipt', 'pay_id' => $payId[1]], true));
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', '{c} {d} {p} toman', ['c' => $count[2], 'd' => '💎', 'p' => $price[2]]), '', Url::to(['payment/receipt', 'pay_id' => $payId[2]], true));
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', '😍😍 «{c} {d} {p} toman» 😍😍', ['c' => $count[3], 'd' => '💎', 'p' => $price[3]]), '', Url::to(['payment/receipt', 'pay_id' => $payId[3]], true));
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Back to main menu'), '/start');
+
+        return $key;
+    }
+
+    public function choosePlans()
+    {
+        $id = $this->getCache()['id'];
+        $cmd = $this->getCache()['cmd'];
+        $plans = $this->getCache()['plans'];
+        foreach ($plans as $key => $plan) {
+            $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', '{d} for {t}', ['d' => $plan['coin'] . ' 💎', 't' => $this->calcTime($plan['time'])]), '/' . $cmd . ' ' . $id . ' ' . $key);
+        }
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'cancel'), '/premium');
 
         return $key;
     }
