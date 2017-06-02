@@ -57,21 +57,20 @@ class Subscribers extends RedisActiveRecord
 
     public function beforeSave($insert)
     {
-        $oldUser = Users::findOne(['user_id' => $this->user_id]);
-        if ($oldUser) {
-            return parent::beforeSave($insert);
-        }
-
         $bot = Bot::findOne(['bot_id' => $this->bot_id]);
         $api = new TelegramBot(['authKey' => $bot->token]);
         $chat = $api->getChat($this->user_id);
 
-        $user = new Users([
-            'user_id' => $this->user_id,
-            'first_name' => isset($chat->first_name) ? $chat->first_name : '',
-            'last_name' => isset($chat->last_name) ? $chat->last_name : '',
-            'username' => isset($chat->username) ? $chat->username : '',
-        ]);
+        if ($oldUser = Users::findOne(['user_id' => $this->user_id])) {
+            $user = $oldUser;
+        } else {
+            $user = new Users();
+        }
+
+        $user->user_id = $this->user_id;
+        $user->first_name = isset($chat->first_name) ? $chat->first_name : '';
+        $user->last_name = isset($chat->last_name) ? $chat->last_name : '';
+        $user->username = isset($chat->username) ? $chat->username : '';
         $user->save();
 
         return parent::beforeSave($insert);
