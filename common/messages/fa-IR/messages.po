@@ -96,7 +96,29 @@ msgid "About Us"
 msgstr "درباره ما"
 
 msgctxt "app_1"
+msgid ""
+"An error occurred since operating your payment. If your credit does not came "
+"back to you after 24 hours please let us know!"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Back to main menu"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Buy Diamonds"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Buy {c} diamonds"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Choose a plan:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Choose one of offers:"
 msgstr ""
 
 msgctxt "app_1"
@@ -104,12 +126,14 @@ msgid "Contest Menu"
 msgstr ""
 
 msgctxt "app_1"
-msgid "English"
-msgstr "English"
+msgid "Finish Upgrade Process"
+msgstr ""
 
 msgctxt "app_1"
-msgid "Farsi"
-msgstr "فارسی"
+msgid ""
+"Forward above message to your friends. So they can join the contest via your "
+"invitation link!"
+msgstr ""
 
 msgctxt "app_1"
 msgid "Forward above message to your friends. So they can vote for your clip"
@@ -117,6 +141,10 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "Get Vote Link"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Get your Diamonds"
 msgstr ""
 
 msgctxt "app_1"
@@ -143,11 +171,27 @@ msgid "No Caption"
 msgstr ""
 
 msgctxt "app_1"
-msgid "No text"
+msgid "No hate button"
 msgstr ""
 
 msgctxt "app_1"
 msgid "Now enter a caption"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Now your clip has no hate button"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Pay {price} Toman for upgrading."
+msgstr ""
+
+msgctxt "app_1"
+msgid "Payment done successfully!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Payment process was canceled by yourself!"
 msgstr ""
 
 msgctxt "app_1"
@@ -174,6 +218,10 @@ msgid ""
 msgstr ""
 
 msgctxt "app_1"
+msgid "Premium Panel"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Results"
 msgstr "مشاهده نتایج"
 
@@ -182,11 +230,23 @@ msgid "Send a clip"
 msgstr ""
 
 msgctxt "app_1"
+msgid "Sent Clip By:"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Show detailed results"
 msgstr ""
 
 msgctxt "app_1"
-msgid "Something went wrong. There is no file with this link!"
+msgid "Show in the top"
+msgstr ""
+
+msgctxt "app_1"
+msgid "There is no more clips to watch! Please visit again later."
+msgstr ""
+
+msgctxt "app_1"
+msgid "There must be a problem. Please try again later!"
 msgstr ""
 
 msgctxt "app_1"
@@ -198,11 +258,27 @@ msgid "Top 10"
 msgstr ""
 
 msgctxt "app_1"
+msgid ""
+"Ultimate Developers is a programming team to make your world online! Making "
+"websites, Telegram Bots and all other web services are in our expertise"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Upgrade to premium"
 msgstr "ارتقاء به نسخه ویژه"
 
 msgctxt "app_1"
-msgid "Vote for this please!"
+msgid "Upgrade to premium to get more tickets to win the prize!!"
+msgstr ""
+
+msgctxt "app_1"
+msgid ""
+"Upgrading to premium lets you to send 6 clips instead of 2. So you have more "
+"chance to win. Also you can buy diamonds and speed up your score!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Watch clips"
 msgstr ""
 
 msgctxt "app_1"
@@ -211,8 +287,20 @@ msgstr ""
 
 msgctxt "app_1"
 msgid ""
-"You earned 15 points for joining via invite link and person who invited you "
-"gained 50 points"
+"You are a normal user. To use premium features, please upgrade your account "
+"first"
+msgstr ""
+
+msgctxt "app_1"
+msgid ""
+"You are trying to verify your payment more than once. If your connection is "
+"slow, please be patient! Otherwise don`t"
+msgstr ""
+
+msgctxt "app_1"
+msgid ""
+"You earned {up} points for joining via invite link and person who invited "
+"you gained {cp} points"
 msgstr ""
 
 msgctxt "app_1"
@@ -225,7 +313,19 @@ msgid ""
 msgstr ""
 
 msgctxt "app_1"
+msgid ""
+"You have not enough diamonds. You need to buy some. Please choose one of "
+"offers:"
+msgstr ""
+
+msgctxt "app_1"
 msgid "You have not participate in competition yet. Please join the contest!"
+msgstr ""
+
+msgctxt "app_1"
+msgid ""
+"You have successfully upgraded to premium user. You are rewarded 25 diamonds "
+"for joining the league! enjoy..."
 msgstr ""
 
 msgctxt "app_1"
@@ -233,7 +333,35 @@ msgid "You have used the bot before. So this invitation is not count!"
 msgstr ""
 
 msgctxt "app_1"
+msgid ""
+"Your account and the one which requested the diamonds is not same. Please "
+"pay more attention"
+msgstr ""
+
+msgctxt "app_1"
+msgid ""
+"Your account and the one which requested the upgrade is not same. Please pay "
+"more attention"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Your clip is one of the most top clips from now"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Your clip is saved. Now it is participated in competition."
+msgstr ""
+
+msgctxt "app_1"
+msgid "Your have {d} diamonds"
+msgstr ""
+
+msgctxt "app_1"
+msgid "back to main menu"
+msgstr ""
+
+msgctxt "app_1"
+msgid "back to menu"
 msgstr ""
 
 msgctxt "app_1"
@@ -242,6 +370,12 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "click the button to watch the clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid ""
+"did you heard of dubesmash bot? That's fun. Come on and join the contest. "
+"You may win the great prizes also! Here is the link:"
 msgstr ""
 
 msgctxt "app_1"
@@ -285,7 +419,19 @@ msgid "show clip"
 msgstr ""
 
 msgctxt "app_1"
+msgid "which Captioned as:"
+msgstr ""
+
+msgctxt "app_1"
 msgid "which item you need link for?"
+msgstr ""
+
+msgctxt "app_1"
+msgid "which item you wanna consecrate its buttons?"
+msgstr ""
+
+msgctxt "app_1"
+msgid "which item you wanna go top?"
 msgstr ""
 
 msgctxt "app_1"
@@ -301,7 +447,404 @@ msgid "your total score is:"
 msgstr ""
 
 msgctxt "app_1"
+msgid "{c} Diamonds are added to your account successfully. Enjoy them!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "{c} {d} {p} toman"
+msgstr ""
+
+msgctxt "app_1"
+msgid "{d} for {t}"
+msgstr ""
+
+msgctxt "app_1"
 msgid "⚠️"
+msgstr ""
+
+msgctxt "app_1"
+msgid "😍😍 «{c} {d} {p} toman» 😍😍"
+msgstr ""
+
+msgctxt "app_2"
+msgid "About Us"
+msgstr "درباره سازنده ربات 🤖"
+
+msgctxt "app_2"
+msgid "Adding new Khatm is canceled"
+msgstr "افزودن ختم جدید لغو شد"
+
+msgctxt "app_2"
+msgid "Are you joining this khatm?"
+msgstr "آیا مایل هستید که در این ختم قرآن شرکت کنید؟"
+
+msgctxt "app_2"
+msgid "Can I help you?"
+msgstr "در خدمتم. بفرمایید!"
+
+msgctxt "app_2"
+msgid "Enter how many {x} you want to read daily?"
+msgstr "می خواهید در هر دوره چه تعداد {x} قرائت نمایید؟"
+
+msgctxt "app_2"
+msgid "Guide"
+msgstr "راهنما"
+
+msgctxt "app_2"
+msgid "Hadith of the day"
+msgstr "حدیث روز"
+
+msgctxt "app_2"
+msgid "Holy sura"
+msgstr "سوره مبارکه"
+
+msgctxt "app_2"
+msgid "Joz "
+msgstr "جزء"
+
+msgctxt "app_2"
+msgid "Just send numbers"
+msgstr "لطفا فقط اعداد (انگلیسی) ارسال نمایید"
+
+msgctxt "app_2"
+msgid "Khatm`s number "
+msgstr "ختم شماره ی "
+
+msgctxt "app_2"
+msgid "Khatm`s purpose: "
+msgstr "نیت ختم: "
+
+msgctxt "app_2"
+msgid "Khatm`s type: "
+msgstr "نوع ختم: "
+
+msgctxt "app_2"
+msgid "Now select type of the khatm"
+msgstr "حالا نوع ختم را مشخص نمایید."
+
+msgctxt "app_2"
+msgid "Number of active khatms: "
+msgstr "تعداد ختم های فعال: "
+
+msgctxt "app_2"
+msgid "Number of finished khatms: "
+msgstr "تعداد ختم های تمام شده: "
+
+msgctxt "app_2"
+msgid "Number of today users: "
+msgstr "تعداد کاربران امروز: "
+
+msgctxt "app_2"
+msgid "Number of whole users: "
+msgstr "تعداد کل کاربران: "
+
+msgctxt "app_2"
+msgid "Please enter the khatm`s title(purpose):"
+msgstr "لطفا نیت ختم قرآن را مشخص نمایید"
+
+msgctxt "app_2"
+msgid "Please join our channel to be noticed of news and upcoming."
+msgstr ""
+"برای دریافت اخبار و اطلاعات مربوط به ربات، نظیر:  \n"
+"- آپدیت ها و افزوده شدن امکانات جدید\n"
+"- اعلام قطعی موقت ربات و دلایل بروز مشکل\n"
+"- مدت زمان انتظار جهت رفع مشکل و دستورالعمل های لازم\n"
+"- و ...\n"
+"لطفا در کانال @UD_newsletter عضو شوید.\n"
+"پس از عضویت به ربات برگشته و /start را ارسال نمایید 🙏\n"
+"\n"
+"ما هم مانند شما از اسپم بدمان می آید. مطالب اسپم، تبلیغات، تبادل و ... هرگز "
+"در این کانال قرار داده نخواهد شد. پس با خیال راحت عضو شوید. 😉"
+
+msgctxt "app_2"
+msgid "Please pay more attention to them"
+msgstr ""
+"لطفا در قرائت آیات اهتمام بورزید تا علاوه بر بهره بردن از فیوضات معنوی، ان "
+"شاءالله دینی بر گردن شما نماند."
+
+msgctxt "app_2"
+msgid "Please read your ayat!"
+msgstr ""
+"لطفا در قرائت آیات اهتمام بورزید تا إن شاء الله در ثواب این ختم قرآن ها "
+"بیشترین بهره را ببرید. پس از قرائت با فشار دادن دکمه ی 'سهم خود را قرائت "
+"کردم' ما را در جریان بگذارید"
+
+msgctxt "app_2"
+msgid "Random Aya"
+msgstr "آیه تصادفی"
+
+msgctxt "app_2"
+msgid "See khatms lists"
+msgstr "مشاهده لیست ختم های قرآن"
+
+msgctxt "app_2"
+msgid ""
+"Select one of khatms to get its information. *your selection does not mean "
+"koining*"
+msgstr ""
+"یکی از ختم ها را انتخاب کرده تا اطلاعات آن برای شما به نمایش دربیاید.\n"
+"** این انتخاب به منزله شرکت در ختم قرآن مورد نظر نــمی باشد **"
+
+msgctxt "app_2"
+msgid "Sorry. But we can`t send a whole joz. please read from a book"
+msgstr ""
+"با عرض پوزش هنوز امکان ارسال یک جزء کامل از قرآن کریم وجود ندارد. لطفا از "
+"منابع دیگری استفاده نمایید و پس از قرائت کامل جزء، از طریق دکمه «سهم خود را "
+"قرائت کردم» ما را در جریان بگذارید."
+
+msgctxt "app_2"
+msgid "There is no such as aya in this khatm"
+msgstr ""
+"تعداد آیات باقی مانده در این ختم، از این تعداد کم تر است. لطفا یا ختم دیگری "
+"را انتخاب کرده و یا تعداد آیات خود را کاهش دهید"
+
+msgctxt "app_2"
+msgid "There is no such as joz in this khatm"
+msgstr ""
+"تعداد جزء باقی مانده در این ختم، از این تعداد کم تر است. لطفا یا ختم دیگری "
+"را انتخاب کرده و یا تعداد جزء خود را کاهش دهید"
+
+msgctxt "app_2"
+msgid "There is no such as page in this khatm"
+msgstr ""
+"تعداد صفحات باقی مانده در این ختم، از این تعداد کم تر است. لطفا یا ختم دیگری "
+"را انتخاب کرده و یا تعداد صفحات خود را کاهش دهید"
+
+msgctxt "app_2"
+msgid "This khatm is finished thanks to God. Please join another khatm."
+msgstr ""
+"این ختم قرآن به حمد الله کامل شد. لطفا از لیست، ختم دیگری را انتخاب نمایید."
+
+msgctxt "app_2"
+msgid "Time spent from when created: "
+msgstr ""
+
+msgctxt "app_2"
+msgid "Today Ayat:"
+msgstr "آیات امروز: "
+
+msgctxt "app_2"
+msgid "Type Aya"
+msgstr "آیه به آیه"
+
+msgctxt "app_2"
+msgid "Type Joz"
+msgstr "جزء به جزء"
+
+msgctxt "app_2"
+msgid "Type Page"
+msgstr "صفحه به صفحه"
+
+msgctxt "app_2"
+msgid ""
+"Ultimate Developers is a programming team to make your world online! Making "
+"websites, Telegram Bots and all other web services are in our expertise"
+msgstr ""
+"«نهایت توسعه» یک تیم نرم افزاری است تا دنیای شما را آنلاین کند.\n"
+"طراحی وب سایت، ساخت ربات تلگرام و تمام وب سرویس های دیگر در تخصص ماست"
+
+msgctxt "app_2"
+msgid "You have added to the khatm"
+msgstr "شما به این ختم قرآن پیوستید"
+
+msgctxt "app_2"
+msgid "You have joined this khatm before."
+msgstr "شما قبلا در این ختم شرکت نموده اید"
+
+msgctxt "app_2"
+msgid "You have no access to do changes here!"
+msgstr ""
+"حق دسترسی برای اعمال تغییرات در این قسمت تنها برای ادمین ها در نظر گرفته شده "
+"است."
+
+msgctxt "app_2"
+msgid "You have not read this khatms for more than 12 hours:"
+msgstr ""
+"شما سهم خود در ختم (های) زیر را به مدت 12 ساعت و یا بیشتر قرائت نکرده اید.\n"
+"در صورتی که سهم خود را قرائت کرده اید، از منوی ختم مورد نظر، روی دکمه «سهم "
+"خود را قرائت کردم» کلیک کنید"
+
+msgctxt "app_2"
+msgid "Your khatm is saved successfully"
+msgstr "ختم قرآن مورد نظر شما با موفقیت به لیست اضافه شد"
+
+msgctxt "app_2"
+msgid "aoozo b Allah"
+msgstr "أعوذ بالله من الشّیطان الرّجیم"
+
+msgctxt "app_2"
+msgid "aya"
+msgstr "آیه "
+
+msgctxt "app_2"
+msgid "back to list"
+msgstr "بازگشت به لیست"
+
+msgctxt "app_2"
+msgid "back to main menu"
+msgstr "بازگشت به منوی اصلی"
+
+msgctxt "app_2"
+msgid "back to menu"
+msgstr "بازگشت به منو"
+
+msgctxt "app_2"
+msgid "besme Allah"
+msgstr "بسم الله الرّحمن الرّحیم"
+
+msgctxt "app_2"
+msgid "cancel"
+msgstr "لغو"
+
+msgctxt "app_2"
+msgid "current reads till now: "
+msgstr "میزان قرائت شده تا الان: "
+
+msgctxt "app_2"
+msgid "dismiss the khatm"
+msgstr "انصراف از ختم"
+
+msgctxt "app_2"
+msgid "from"
+msgstr "از"
+
+msgctxt "app_2"
+msgid "get {x}"
+msgstr "دریافت {x}"
+
+msgctxt "app_2"
+msgid "guide message"
+msgstr ""
+"ربات حاضر، جهت مشارکت شما مومنین گرامی در طرح های ختم قرآن طراحی شده و جهت "
+"برآورده کردن انواع نیازها و سلایق، در اقدامی نو دست به طراحی شیوه جدیدی در "
+"این زمینه زده است. به این صورت که امکان دریافت سهم قرائت به سه روش آیه به "
+"آیه، صفحه ای و جزء به جزء وجود دارد. \n"
+"\n"
+"شما می توانید با استفاده از دکمه ی «مشاهده لیست ختم های قرآن» لیستی از تمام "
+"ختم های موجود و فعال با نیت های گوناگون را مشاهده کنید. پس از به نمایش "
+"درآمدن اطلاعات و جزئیات ختم، می توانید آمادگی و همچنین میزان مشارکت خود را "
+"در ختم قرآن مذکور اعلام کرده و سهم خود را دریافت کنید. پس از قرائت بخش "
+"واگذار شده، با فشردن دکمه «سهم خود را قرائت کردم» می توانید سهمیه جدید را "
+"دریافت نمایید.\n"
+"لازم به ذکر است که با انتخاب یکی از ختم ها در لیست کلی، اگر قبلا در آن ختم "
+"شرکت کرده باشید، به صورت خودکار منوی آن ختم برای شما نمایش داده خواهد شد. در "
+"غیر این صورت می توانید فرآیند مشارکت در ختم را طی نمایید.\n"
+"\n"
+"\n"
+"چنانچه مشکل و یا سوال خاصی برای شما مطرح شد، در صورتی که پاسخ آن را در کانال "
+"«اخبار نهایت توسعه» به آدرس @UD_newsletter نیافتید با آی دی "
+"@ultimate_developer_admin تماس بگیرید.\n"
+"با تشکر، تیم مدیریت ربات ختم قرآن"
+
+msgctxt "app_2"
+msgid "holy aya"
+msgstr "آیه شریفه "
+
+msgctxt "app_2"
+msgid "holy sura"
+msgstr "سوره مبارکه"
+
+msgctxt "app_2"
+msgid "join this khatm"
+msgstr "پیوستن به این ختم"
+
+msgctxt "app_2"
+msgid "joz"
+msgstr "جزء"
+
+msgctxt "app_2"
+msgid "khatm menu"
+msgstr "منوی ختم قرآن"
+
+msgctxt "app_2"
+msgid ""
+"maximum number of ayat is 25. please enter a number fewer than or equal to 25"
+msgstr ""
+"بیشترین تعداد مجاز 25 آیه است. لطفا عددی کمتر از 25 و بیشتر از 5 وارد نمایید"
+
+msgctxt "app_2"
+msgid ""
+"minimum number of Joz`s is 1. please enter a number greater than or equal to "
+"1"
+msgstr ""
+"حداقل مقدار مجاز، 1 جزء است. لطفا عددی بیشتر از یا برابر با 1 انتخاب نمایید"
+
+msgctxt "app_2"
+msgid ""
+"minimum number of aya is 5. please enter a number greater than or equal to 5"
+msgstr ""
+"حداقل مقدار مجاز 5 آیه است. لطفا عددی بیشتر از 5 و کمتر از 25 وارد نمایید"
+
+msgctxt "app_2"
+msgid ""
+"minimum number of pages is 1. please enter a number greater than or equal to "
+"1"
+msgstr ""
+"حداقل مقدار مجاز، 1 صفحه می باشد.لطفا عددی بزرگتر یا مساوی 1 انتخاب نمایید"
+
+msgctxt "app_2"
+msgid "page"
+msgstr " صفحه "
+
+msgctxt "app_2"
+msgid "read and dismiss"
+msgstr "قرائت کرده و انصراف می دهم"
+
+msgctxt "app_2"
+msgid "read my share"
+msgstr "سهم خود را قرائت کردم"
+
+msgctxt "app_2"
+msgid "the khatm dismissed"
+msgstr "انصراف شما از ختم مورد نظر انجام شد"
+
+msgctxt "app_2"
+msgid "to"
+msgstr "الی"
+
+msgctxt "app_2"
+msgid "type aya"
+msgstr "نوع آیه به آیه"
+
+msgctxt "app_2"
+msgid "type joz"
+msgstr "نوع جزء به جزء"
+
+msgctxt "app_2"
+msgid "type page"
+msgstr "نوع صفحه ای"
+
+msgctxt "app_2"
+msgid "welcome"
+msgstr ""
+"به ربات ختم قرآن خوش آمدید.\n"
+"لطفا در صورت نیاز به راهنمایی به از منو دکمه «راهنما» را انتخاب کرده و یا "
+"روی /help کلیک نمایید."
+
+msgctxt "app_2"
+msgid "you must read your last share"
+msgstr "شما باید آخرین سهم خود از این ختم را قرائت نمایید"
+
+msgctxt "app_2"
+msgid "your share is: "
+msgstr "سهم شما: "
+
+#, fuzzy
+#| msgctxt "app_1"
+#| msgid "English"
+msgctxt "app_bot"
+msgid "English"
+msgstr "English"
+
+#, fuzzy
+#| msgctxt "app_1"
+#| msgid "Farsi"
+msgctxt "app_bot"
+msgid "Farsi"
+msgstr "فارسی"
+
+msgctxt "app_bot"
+msgid "No text"
 msgstr ""
 
 msgctxt "app_bot"
@@ -322,6 +865,10 @@ msgid "day"
 msgstr "روز"
 
 msgctxt "app_bot"
+msgid "hour"
+msgstr ""
+
+msgctxt "app_bot"
 msgid "month"
 msgstr "ماه"
 
@@ -333,11 +880,35 @@ msgstr ""
 "لطفا فقط یک متن ارسال نمایید و از استفاده ی دکمه های قبلی جدا پرهیز کنید. "
 "این عمل ممکن است در سرویس دهی به شما تاثیرات منفی داشته باشد."
 
+#, fuzzy
+#| msgctxt "app_bot"
+#| msgid "the fee for this bot is {price} Rials for {vt}"
 msgctxt "app_bot"
-msgid "the fee for this bot is {price} Rials for {vt}"
+msgid "the fee for this bot is {price} Tomans for {vt}"
 msgstr "حق اشتراک این ربات برای مدت {vt}، مبلغ {price} تومان می باشد."
 
 msgctxt "app_bot"
+msgid "week"
+msgstr "هفته"
+
+#, fuzzy
+#| msgctxt "app_bot"
+#| msgid "day"
+msgctxt "app_payment"
+msgid "day"
+msgstr "روز"
+
+#, fuzzy
+#| msgctxt "app_bot"
+#| msgid "month"
+msgctxt "app_payment"
+msgid "month"
+msgstr "ماه"
+
+#, fuzzy
+#| msgctxt "app_bot"
+#| msgid "week"
+msgctxt "app_payment"
 msgid "week"
 msgstr "هفته"
 

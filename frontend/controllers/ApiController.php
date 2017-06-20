@@ -35,47 +35,29 @@ class ApiController extends Controller
     {
         if ($this->getBot($tokenId, $tokenString) === null) {
             $trans = [
-                'Join Contest' . ' 🏁' => '/contestMenu',
-                'Results' . ' 📊' => '/results',
-                'Invite Friends' . ' 👬👭' => '/invite',
+                'Join Quran Khatm' . ' 📗' => '/join',
+                'مشارکت در ختم قرآن' . ' 📗' => '/join',
+                'See khatms lists' . ' 📑' => '/join',
+                'مشاهده لیست ختم های قرآن' . ' 📑' => '/join',
+                'Random Aya' . ' 📤' => '/random',
+                'آیه تصادفی' . ' 📤' => '/random',
+                'Hadith of the day' . ' 📜' => '/hadith',
+                'حدیث روز' . ' 📜' => '/hadith',
                 'Guide' . ' 📚' => '/help',
-                'About Us' . ' 🔖' => '/about',
-                'Upgrade to premium' . ' 📤' => '/upgrade',
-                'شرکت در مسابقه' . ' 🏁' => '/contestMenu',
-                'مشاهده نتایج' . ' 📊' => '/results',
-                'دعوت از دوستان' . ' 👬👭' => '/invite',
                 'راهنما' . ' 📚' => '/help',
+                'About Us' . ' 🔖' => '/about',
                 'درباره ما' . ' 🔖' => '/about',
-                'ارتقاء به نسخه ویژه' . ' 📤' => '/upgrade',
             ];
             $bot = new Bot([
-                'bot_id' => 1,
-                'telegram_id' => 350954048,
-                'first_name' => 'دابسمش',
-                'username' => 'iran_dubsmash_robot',
-                'token' => '350954048:AAH2zJy-YFZTPVybo18MHqzdyysPtBapuRo',
+                'bot_id' => 2,
+                'telegram_id' => 210807040,
+                'first_name' => 'ختم قرآن',
+                'username' => 'PocketQuranBot',
+                'token' => '210807040:AAED2LjXbeyZDaHSyDGPxEo2OW1iliadqOU',
                 'type' => Bot::TYPE_IN_APP_PAYMENT,
                 'priceString' => json_encode([
                     'objects' => [
-                        'upgrade' => 2000,
-                        'coins' => [
-                            0 => [
-                                'price' => 100,
-                                'count' => 50
-                            ],
-                            1 => [
-                                'price' => 100,
-                                'count' => 100
-                            ],
-                            2 => [
-                                'price' => 100,
-                                'count' => 200
-                            ],
-                            3 => [
-                                'price' => 100,
-                                'count' => 1000
-                            ],
-                        ]
+                        'support' => [1000, 2000, 5000, 10000]
                     ]
                 ]),
                 'translations' => yii\helpers\Json::encode($trans),

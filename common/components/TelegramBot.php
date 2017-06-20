@@ -93,6 +93,15 @@ class TelegramBot extends Component
         return null;
     }
 
+    public function getChatMember($chatId, $userId)
+    {
+        $params = [
+            'chat_id' => $chatId,
+            'user_id' => $userId
+        ];
+        return $this->post('getChatMember', $params);
+    }
+
     /**
      * Edits a message reply markup
      * @param $chatId

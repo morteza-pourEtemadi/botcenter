@@ -135,12 +135,13 @@ abstract class Command extends Component
 
         if ($this->reply !== null) {
             $reply = Yii::$app->cache->get('reply:' . $this->bot->bot_id . $this->_chatId);
+            $this->isReply = true;
             if (isset($reply['command'])) {
                 if ($reply['command'] != $this->pattern && strpos($this->pattern, 'cancel') == false) {
                     $this->killReply();
+                    $this->isReply = false;
                 }
             }
-            $this->isReply = true;
         }
         return true;
     }
@@ -692,5 +693,19 @@ abstract class Command extends Component
         $returnTime .= $hour > 0 ? $hour . Yii::t('app_bot', 'hour') : '';
 
         return $returnTime;
+    }
+
+    public function isJoinedChannel()
+    {
+        $response = $this->api->getChatMember('@UD_newsletter', $this->_chatId);
+        if ($response->ok == true) {
+            $status = $response->result->status;
+            if ($status == 'left' || $status == 'kicked') {
+                return false;
+            }
+            return true;
+        } else {
+            return false;
+        }
     }
 }

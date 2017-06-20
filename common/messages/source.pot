@@ -87,7 +87,27 @@ msgid "About Us"
 msgstr ""
 
 msgctxt "app_1"
+msgid "An error occurred since operating your payment. If your credit does not came back to you after 24 hours please let us know!"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Back to main menu"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Buy Diamonds"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Buy {c} diamonds"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Choose a plan:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Choose one of offers:"
 msgstr ""
 
 msgctxt "app_1"
@@ -95,11 +115,11 @@ msgid "Contest Menu"
 msgstr ""
 
 msgctxt "app_1"
-msgid "English"
+msgid "Finish Upgrade Process"
 msgstr ""
 
 msgctxt "app_1"
-msgid "Farsi"
+msgid "Forward above message to your friends. So they can join the contest via your invitation link!"
 msgstr ""
 
 msgctxt "app_1"
@@ -108,6 +128,10 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "Get Vote Link"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Get your Diamonds"
 msgstr ""
 
 msgctxt "app_1"
@@ -127,11 +151,27 @@ msgid "No Caption"
 msgstr ""
 
 msgctxt "app_1"
-msgid "No text"
+msgid "No hate button"
 msgstr ""
 
 msgctxt "app_1"
 msgid "Now enter a caption"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Now your clip has no hate button"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Pay {price} Toman for upgrading."
+msgstr ""
+
+msgctxt "app_1"
+msgid "Payment done successfully!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Payment process was canceled by yourself!"
 msgstr ""
 
 msgctxt "app_1"
@@ -151,6 +191,10 @@ msgid "Please vote for my clip. It`s an exciting competition with great prizes\n
 msgstr ""
 
 msgctxt "app_1"
+msgid "Premium Panel"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Results"
 msgstr ""
 
@@ -159,11 +203,23 @@ msgid "Send a clip"
 msgstr ""
 
 msgctxt "app_1"
+msgid "Sent Clip By:"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Show detailed results"
 msgstr ""
 
 msgctxt "app_1"
-msgid "Something went wrong. There is no file with this link!"
+msgid "Show in the top"
+msgstr ""
+
+msgctxt "app_1"
+msgid "There is no more clips to watch! Please visit again later."
+msgstr ""
+
+msgctxt "app_1"
+msgid "There must be a problem. Please try again later!"
 msgstr ""
 
 msgctxt "app_1"
@@ -175,11 +231,23 @@ msgid "Top 10"
 msgstr ""
 
 msgctxt "app_1"
+msgid "Ultimate Developers is a programming team to make your world online! Making websites, Telegram Bots and all other web services are in our expertise"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Upgrade to premium"
 msgstr ""
 
 msgctxt "app_1"
-msgid "Vote for this please!"
+msgid "Upgrade to premium to get more tickets to win the prize!!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Upgrading to premium lets you to send 6 clips instead of 2. So you have more chance to win. Also you can buy diamonds and speed up your score!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Watch clips"
 msgstr ""
 
 msgctxt "app_1"
@@ -187,7 +255,15 @@ msgid "What can I do for you?"
 msgstr ""
 
 msgctxt "app_1"
-msgid "You earned 15 points for joining via invite link and person who invited you gained 50 points"
+msgid "You are a normal user. To use premium features, please upgrade your account first"
+msgstr ""
+
+msgctxt "app_1"
+msgid "You are trying to verify your payment more than once. If your connection is slow, please be patient! Otherwise don`t"
+msgstr ""
+
+msgctxt "app_1"
+msgid "You earned {up} points for joining via invite link and person who invited you gained {cp} points"
 msgstr ""
 
 msgctxt "app_1"
@@ -195,7 +271,15 @@ msgid "You got to your limits of sending file. \n                If you are not 
 msgstr ""
 
 msgctxt "app_1"
+msgid "You have not enough diamonds. You need to buy some. Please choose one of offers:"
+msgstr ""
+
+msgctxt "app_1"
 msgid "You have not participate in competition yet. Please join the contest!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "You have successfully upgraded to premium user. You are rewarded 25 diamonds for joining the league! enjoy..."
 msgstr ""
 
 msgctxt "app_1"
@@ -203,7 +287,31 @@ msgid "You have used the bot before. So this invitation is not count!"
 msgstr ""
 
 msgctxt "app_1"
+msgid "Your account and the one which requested the diamonds is not same. Please pay more attention"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Your account and the one which requested the upgrade is not same. Please pay more attention"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Your clip is one of the most top clips from now"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Your clip is saved. Now it is participated in competition."
+msgstr ""
+
+msgctxt "app_1"
+msgid "Your have {d} diamonds"
+msgstr ""
+
+msgctxt "app_1"
+msgid "back to main menu"
+msgstr ""
+
+msgctxt "app_1"
+msgid "back to menu"
 msgstr ""
 
 msgctxt "app_1"
@@ -212,6 +320,10 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "click the button to watch the clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid "did you heard of dubesmash bot? That's fun. Come on and join the contest. You may win the great prizes also! Here is the link:"
 msgstr ""
 
 msgctxt "app_1"
@@ -255,7 +367,19 @@ msgid "show clip"
 msgstr ""
 
 msgctxt "app_1"
+msgid "which Captioned as:"
+msgstr ""
+
+msgctxt "app_1"
 msgid "which item you need link for?"
+msgstr ""
+
+msgctxt "app_1"
+msgid "which item you wanna consecrate its buttons?"
+msgstr ""
+
+msgctxt "app_1"
+msgid "which item you wanna go top?"
 msgstr ""
 
 msgctxt "app_1"
@@ -271,7 +395,327 @@ msgid "your total score is:"
 msgstr ""
 
 msgctxt "app_1"
+msgid "{c} Diamonds are added to your account successfully. Enjoy them!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "{c} {d} {p} toman"
+msgstr ""
+
+msgctxt "app_1"
+msgid "{d} for {t}"
+msgstr ""
+
+msgctxt "app_1"
 msgid "⚠️"
+msgstr ""
+
+msgctxt "app_1"
+msgid "😍😍 «{c} {d} {p} toman» 😍😍"
+msgstr ""
+
+msgctxt "app_2"
+msgid "About Us"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Adding new Khatm is canceled"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Are you joining this khatm?"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Can I help you?"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Enter how many {x} you want to read daily?"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Guide"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Hadith of the day"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Holy sura"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Joz "
+msgstr ""
+
+msgctxt "app_2"
+msgid "Just send numbers"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Khatm`s number "
+msgstr ""
+
+msgctxt "app_2"
+msgid "Khatm`s purpose: "
+msgstr ""
+
+msgctxt "app_2"
+msgid "Khatm`s type: "
+msgstr ""
+
+msgctxt "app_2"
+msgid "Now select type of the khatm"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Number of active khatms: "
+msgstr ""
+
+msgctxt "app_2"
+msgid "Number of finished khatms: "
+msgstr ""
+
+msgctxt "app_2"
+msgid "Number of today users: "
+msgstr ""
+
+msgctxt "app_2"
+msgid "Number of whole users: "
+msgstr ""
+
+msgctxt "app_2"
+msgid "Please enter the khatm`s title(purpose):"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Please join our channel to be noticed of news and upcoming."
+msgstr ""
+
+msgctxt "app_2"
+msgid "Please pay more attention to them"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Please read your ayat!"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Random Aya"
+msgstr ""
+
+msgctxt "app_2"
+msgid "See khatms lists"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Select one of khatms to get its information. *your selection does not mean koining*"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Sorry. But we can`t send a whole joz. please read from a book"
+msgstr ""
+
+msgctxt "app_2"
+msgid "There is no such as aya in this khatm"
+msgstr ""
+
+msgctxt "app_2"
+msgid "There is no such as joz in this khatm"
+msgstr ""
+
+msgctxt "app_2"
+msgid "There is no such as page in this khatm"
+msgstr ""
+
+msgctxt "app_2"
+msgid "This khatm is finished thanks to God. Please join another khatm."
+msgstr ""
+
+msgctxt "app_2"
+msgid "Time spent from when created: "
+msgstr ""
+
+msgctxt "app_2"
+msgid "Today Ayat:"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Type Aya"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Type Joz"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Type Page"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Ultimate Developers is a programming team to make your world online! Making websites, Telegram Bots and all other web services are in our expertise"
+msgstr ""
+
+msgctxt "app_2"
+msgid "You have added to the khatm"
+msgstr ""
+
+msgctxt "app_2"
+msgid "You have joined this khatm before."
+msgstr ""
+
+msgctxt "app_2"
+msgid "You have no access to do changes here!"
+msgstr ""
+
+msgctxt "app_2"
+msgid "You have not read this khatms for more than 12 hours:"
+msgstr ""
+
+msgctxt "app_2"
+msgid "Your khatm is saved successfully"
+msgstr ""
+
+msgctxt "app_2"
+msgid "aoozo b Allah"
+msgstr ""
+
+msgctxt "app_2"
+msgid "aya"
+msgstr ""
+
+msgctxt "app_2"
+msgid "back to list"
+msgstr ""
+
+msgctxt "app_2"
+msgid "back to main menu"
+msgstr ""
+
+msgctxt "app_2"
+msgid "back to menu"
+msgstr ""
+
+msgctxt "app_2"
+msgid "besme Allah"
+msgstr ""
+
+msgctxt "app_2"
+msgid "cancel"
+msgstr ""
+
+msgctxt "app_2"
+msgid "current reads till now: "
+msgstr ""
+
+msgctxt "app_2"
+msgid "dismiss the khatm"
+msgstr ""
+
+msgctxt "app_2"
+msgid "from"
+msgstr ""
+
+msgctxt "app_2"
+msgid "get {x}"
+msgstr ""
+
+msgctxt "app_2"
+msgid "guide message"
+msgstr ""
+
+msgctxt "app_2"
+msgid "holy aya"
+msgstr ""
+
+msgctxt "app_2"
+msgid "holy sura"
+msgstr ""
+
+msgctxt "app_2"
+msgid "join this khatm"
+msgstr ""
+
+msgctxt "app_2"
+msgid "joz"
+msgstr ""
+
+msgctxt "app_2"
+msgid "khatm menu"
+msgstr ""
+
+msgctxt "app_2"
+msgid "maximum number of ayat is 25. please enter a number fewer than or equal to 25"
+msgstr ""
+
+msgctxt "app_2"
+msgid "minimum number of Joz`s is 1. please enter a number greater than or equal to 1"
+msgstr ""
+
+msgctxt "app_2"
+msgid "minimum number of aya is 5. please enter a number greater than or equal to 5"
+msgstr ""
+
+msgctxt "app_2"
+msgid "minimum number of pages is 1. please enter a number greater than or equal to 1"
+msgstr ""
+
+msgctxt "app_2"
+msgid "page"
+msgstr ""
+
+msgctxt "app_2"
+msgid "read and dismiss"
+msgstr ""
+
+msgctxt "app_2"
+msgid "read my share"
+msgstr ""
+
+msgctxt "app_2"
+msgid "the khatm dismissed"
+msgstr ""
+
+msgctxt "app_2"
+msgid "to"
+msgstr ""
+
+msgctxt "app_2"
+msgid "type aya"
+msgstr ""
+
+msgctxt "app_2"
+msgid "type joz"
+msgstr ""
+
+msgctxt "app_2"
+msgid "type page"
+msgstr ""
+
+msgctxt "app_2"
+msgid "welcome"
+msgstr ""
+
+msgctxt "app_2"
+msgid "you must read your last share"
+msgstr ""
+
+msgctxt "app_2"
+msgid "your share is: "
+msgstr ""
+
+msgctxt "app_bot"
+msgid "English"
+msgstr ""
+
+msgctxt "app_bot"
+msgid "Farsi"
+msgstr ""
+
+msgctxt "app_bot"
+msgid "No text"
 msgstr ""
 
 msgctxt "app_bot"
@@ -287,6 +731,10 @@ msgid "day"
 msgstr ""
 
 msgctxt "app_bot"
+msgid "hour"
+msgstr ""
+
+msgctxt "app_bot"
 msgid "month"
 msgstr ""
 
@@ -295,10 +743,22 @@ msgid "please send a text. no click on previous menu tabs. just type a text or l
 msgstr ""
 
 msgctxt "app_bot"
-msgid "the fee for this bot is {price} Rials for {vt}"
+msgid "the fee for this bot is {price} Tomans for {vt}"
 msgstr ""
 
 msgctxt "app_bot"
+msgid "week"
+msgstr ""
+
+msgctxt "app_payment"
+msgid "day"
+msgstr ""
+
+msgctxt "app_payment"
+msgid "month"
+msgstr ""
+
+msgctxt "app_payment"
 msgid "week"
 msgstr ""
 
