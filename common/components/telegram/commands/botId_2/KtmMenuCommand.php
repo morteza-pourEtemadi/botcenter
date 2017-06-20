@@ -22,7 +22,7 @@ class KtmMenuCommand extends CommandLocal
      */
     public function execute()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         $ktm = Khatm::findOne(['id' => $input[1]]);
 
         $this->setCache(['x' => $ktm->getTypePart(), 'id' => $input[1]]);

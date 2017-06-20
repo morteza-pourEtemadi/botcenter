@@ -25,7 +25,7 @@ class GetCommand extends CommandLocal
      */
     public function execute()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         if (isset($input[2]) == false) {
             return false;
         }
@@ -215,7 +215,7 @@ class GetCommand extends CommandLocal
 
     public function endKtm()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         $ktm = Khatm::findOne(['id' => $input[2]]);
         $ktm->status = Khatm::STATUS_FINISHED;
         $ktm->save();

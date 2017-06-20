@@ -21,8 +21,8 @@ abstract class Command extends Component
 {
     const ITEM_PER_PAGE = 5;
 
-    const CACHE_DURATION_REPLY = 0; // Never Expires
-    const CACHE_DURATION_KEYBOARD = 0; // Never Expires
+    const CACHE_DURATION_REPLY = 315360000; // 10 years
+    const CACHE_DURATION_KEYBOARD = 315360000; // 10 years
 
     const E_FLAG_IR = '🇮🇷';
     const E_FLAG_UK = '🇬🇧';
@@ -172,7 +172,7 @@ abstract class Command extends Component
             return false;
         }
         $owners = ['289670029', '101538817'];
-        return in_array($this->_chatId, $owners, true);
+        return in_array($this->_chatId, $owners, false);
     }
 
     /**
@@ -509,6 +509,11 @@ abstract class Command extends Component
     public function puringText($text)
     {
         return mb_substr($text, 0, 1) == '/' ? Yii::t('app_bot', 'No text') : $text;
+    }
+
+    public function getInput()
+    {
+        return mb_substr($this->_messageText, 0, 1) == '/' ? explode(' ', $this->_messageText) : [$this->pattern];
     }
 
     /**

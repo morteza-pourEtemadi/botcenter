@@ -24,7 +24,7 @@ class JoinCommand extends CommandLocal
      */
     public function execute()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
 
         if (isset($input[1]) && $input[1] == 'cancel') {
             $this->killReply();
