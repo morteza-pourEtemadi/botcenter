@@ -535,10 +535,6 @@ msgid "This khatm is finished thanks to God. Please join another khatm."
 msgstr ""
 
 msgctxt "app_2"
-msgid "Time spent from when created: "
-msgstr ""
-
-msgctxt "app_2"
 msgid "Today Ayat:"
 msgstr ""
 
@@ -576,6 +572,10 @@ msgstr ""
 
 msgctxt "app_2"
 msgid "Your khatm is saved successfully"
+msgstr ""
+
+msgctxt "app_2"
+msgid "age of khatm: "
 msgstr ""
 
 msgctxt "app_2"
@@ -732,6 +732,10 @@ msgstr ""
 
 msgctxt "app_bot"
 msgid "hour"
+msgstr ""
+
+msgctxt "app_bot"
+msgid "minute"
 msgstr ""
 
 msgctxt "app_bot"

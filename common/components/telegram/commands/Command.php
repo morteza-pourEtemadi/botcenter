@@ -682,6 +682,7 @@ abstract class Command extends Component
 
     public function calcTime($time)
     {
+        $minuteLong = 60;
         $hourLong = 3600;
         $dayLong = 3600*24;
         $weekLong = 3600*24*7;
@@ -691,11 +692,13 @@ abstract class Command extends Component
         $week = floor(($time - ($month * $monthLong)) / $weekLong);
         $day = floor(($time - ($month * $monthLong) - ($week * $weekLong)) / $dayLong);
         $hour = floor(($time - ($month * $monthLong) - ($week * $weekLong) - ($day * $dayLong)) / $hourLong);
+        $hour = floor(($time - ($month * $monthLong) - ($week * $weekLong) - ($day * $dayLong) - ($hour * $hourLong)) / $minuteLong);
 
         $returnTime = $month > 0 ? $month . Yii::t('app_bot', 'month') : '';
         $returnTime .= $week > 0 ? $week . Yii::t('app_bot', 'week') : '';
         $returnTime .= $day > 0 ? $day . Yii::t('app_bot', 'day') : '';
         $returnTime .= $hour > 0 ? $hour . Yii::t('app_bot', 'hour') : '';
+        $returnTime .= $hour > 0 ? $hour . Yii::t('app_bot', 'minute') : '';
 
         return $returnTime;
     }

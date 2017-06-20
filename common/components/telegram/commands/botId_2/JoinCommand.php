@@ -154,7 +154,7 @@ class JoinCommand extends CommandLocal
         $message .= Yii::t('app_2', 'Khatm`s purpose: ') . $ktm->title . "\n";
         $message .= Yii::t('app_2', 'Khatm`s type: ') . $ktm->getType() . "\n";
         $message .= Yii::t('app_2', 'current reads till now: ') . $ktm->current_pointer . "\n";
-        $message .= Yii::t('app_2', 'Time spent from when created: ') . $this->calcTime(time() - $ktm->created_at) . "\n\n";
+        $message .= Yii::t('app_2', 'age of khatm: ') . ' ' . $this->calcTime(time() - $ktm->created_at) . "\n\n";
         $message .= Yii::t('app_2', 'Are you joining this khatm?');
 
         $this->setCache(['ktm_id' => $input]);

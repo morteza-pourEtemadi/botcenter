@@ -616,10 +616,6 @@ msgstr ""
 "این ختم قرآن به حمد الله کامل شد. لطفا از لیست، ختم دیگری را انتخاب نمایید."
 
 msgctxt "app_2"
-msgid "Time spent from when created: "
-msgstr ""
-
-msgctxt "app_2"
 msgid "Today Ayat:"
 msgstr "آیات امروز: "
 
@@ -667,6 +663,10 @@ msgstr ""
 msgctxt "app_2"
 msgid "Your khatm is saved successfully"
 msgstr "ختم قرآن مورد نظر شما با موفقیت به لیست اضافه شد"
+
+msgctxt "app_2"
+msgid "age of khatm: "
+msgstr "زمان سپری شده از ایجاد ختم: "
 
 msgctxt "app_2"
 msgid "aoozo b Allah"
@@ -829,23 +829,17 @@ msgctxt "app_2"
 msgid "your share is: "
 msgstr "سهم شما: "
 
-#, fuzzy
-#| msgctxt "app_1"
-#| msgid "English"
 msgctxt "app_bot"
 msgid "English"
 msgstr "English"
 
-#, fuzzy
-#| msgctxt "app_1"
-#| msgid "Farsi"
 msgctxt "app_bot"
 msgid "Farsi"
 msgstr "فارسی"
 
 msgctxt "app_bot"
 msgid "No text"
-msgstr ""
+msgstr "متنی وجود ندارد"
 
 msgctxt "app_bot"
 msgid ""
@@ -866,7 +860,11 @@ msgstr "روز"
 
 msgctxt "app_bot"
 msgid "hour"
-msgstr ""
+msgstr "ساعت"
+
+msgctxt "app_bot"
+msgid "minute"
+msgstr "دقیقه"
 
 msgctxt "app_bot"
 msgid "month"
@@ -880,9 +878,6 @@ msgstr ""
 "لطفا فقط یک متن ارسال نمایید و از استفاده ی دکمه های قبلی جدا پرهیز کنید. "
 "این عمل ممکن است در سرویس دهی به شما تاثیرات منفی داشته باشد."
 
-#, fuzzy
-#| msgctxt "app_bot"
-#| msgid "the fee for this bot is {price} Rials for {vt}"
 msgctxt "app_bot"
 msgid "the fee for this bot is {price} Tomans for {vt}"
 msgstr "حق اشتراک این ربات برای مدت {vt}، مبلغ {price} تومان می باشد."
@@ -891,23 +886,14 @@ msgctxt "app_bot"
 msgid "week"
 msgstr "هفته"
 
-#, fuzzy
-#| msgctxt "app_bot"
-#| msgid "day"
 msgctxt "app_payment"
 msgid "day"
 msgstr "روز"
 
-#, fuzzy
-#| msgctxt "app_bot"
-#| msgid "month"
 msgctxt "app_payment"
 msgid "month"
 msgstr "ماه"
 
-#, fuzzy
-#| msgctxt "app_bot"
-#| msgid "week"
 msgctxt "app_payment"
 msgid "week"
 msgstr "هفته"
