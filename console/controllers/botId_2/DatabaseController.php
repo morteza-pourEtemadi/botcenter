@@ -1,6 +1,6 @@
 <?php
 
-namespace console\controllers;
+namespace console\controllers\botId_2;
 
 use yii\console\Controller;
 use common\models\bot\botId_2\Hadith;

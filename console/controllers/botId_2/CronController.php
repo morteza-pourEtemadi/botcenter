@@ -1,6 +1,6 @@
 <?php
 
-namespace console\controllers;
+namespace console\controllers\botId_2;
 
 use Yii;
 use yii\helpers\Json;
