@@ -27,6 +27,9 @@ class StartCommand extends CommandLocal
             $user = new User([
                 'user_id' => $this->_chatId,
             ]);
+            if ($this->isUserOwner()) {
+                $user->type = User::TYPE_OWNER;
+            }
             $user->save();
             $user->getUniqueUser()->setSettings('language', 1);
             Yii::$app->language = 'fa-IR';
