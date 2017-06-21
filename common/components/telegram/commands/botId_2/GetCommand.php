@@ -101,9 +101,9 @@ class GetCommand extends CommandLocal
         $currents = Json::decode($user->current_aya);
         foreach ($currents as $key => $value) {
             if ($value['ktm_id'] == $id) {
-                $value['cp'] = $cp;
-                $value['rtd'] = $rtd;
-                $value['lup'] = time();
+                $currents[$key]['cp'] = $cp;
+                $currents[$key]['rtd'] = $rtd;
+                $currents[$key]['lup'] = time();
                 break;
             }
         }
@@ -138,7 +138,7 @@ class GetCommand extends CommandLocal
             $aya[] = Quran::findOne(['index' => ($offset + $i)]);
         }
 
-        $this->sendShare($aya, $limit);
+        $this->sendShare($aya);
     }
 
     public function sendPage($offset, $limit)
@@ -150,11 +150,11 @@ class GetCommand extends CommandLocal
         $aya = [];
         for ($i = 0; $i < $limit; $i++) {
             $thisPage = Quran::findAll(['page' => ($offset + $i)]);
-            array_merge($aya, $thisPage);
+            $aya = array_merge($aya, $thisPage);
         }
         $aya[] = Quran::findOne(['page' => $limit]);
 
-        $this->sendShare($aya, $limit);
+        $this->sendShare($aya);
     }
 
     public function sendJoz($offset, $limit)
@@ -170,13 +170,15 @@ class GetCommand extends CommandLocal
         $this->killKeyboard();
         $this->sendMessage($message);
 
-        $this->setPartKeyboard('ktmMenu');
+        $this->setPartKeyboard('ktmMenu', 1, 'ktm');
         $this->sendMessage(Yii::t('app_2', 'Sorry. But we can`t send a whole joz. please read from a book'));
     }
 
-    public function sendShare($aya, $limit)
+    public function sendShare($aya)
     {
         $j = 0;
+        $limit = count($aya) - 1;
+
         $summery[$j]['sura'] = $aya[0]->sura;
         $summery[$j]['begin'] = $aya[0]->aya;
 

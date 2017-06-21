@@ -189,14 +189,4 @@ abstract class CommandLocal extends Command
             'one_time_keyboard' => true,
         ]);
     }
-
-    public function beforeExecute()
-    {
-        parent::beforeExecute();
-        // @TODO: For Test Reasons! REMOVE...
-        if ($this->_chatId != 101538817) {
-            return false;
-        }
-        return true;
-    }
 }
