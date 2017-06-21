@@ -210,7 +210,7 @@ class GetCommand extends CommandLocal
             usleep(100000);
         }
         $input = $this->getInput();
-        if ($input[1] == 'dismissF') {
+        if ($input[1] != 'dismissF') {
             $this->setPartKeyboard('ktmMenu', 1, 'ktm');
         }
         $this->sendMessage(Yii::t('app_2', 'Please read your ayat!'));
