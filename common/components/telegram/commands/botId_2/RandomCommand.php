@@ -27,7 +27,7 @@ class RandomCommand extends CommandLocal
 
         $message = $aya->text . "\n";
         $message.= $aya->translation . "\n\n";
-        $message.= Yii::t('app_2', 'holy sura') . $aya->sura . Yii::t('app_2', 'holy aya') . $aya->aya;
+        $message.= Yii::t('app_2', 'holy sura') . ' ' . $aya->sura . ' ' . Yii::t('app_2', 'holy aya') . ' ' . $aya->aya;
 
         $this->setMainKeyboard();
         $this->sendMessage($message);

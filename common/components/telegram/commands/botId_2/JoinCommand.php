@@ -64,9 +64,10 @@ class JoinCommand extends CommandLocal
 
     public function saveData()
     {
-        $num = $this->_messageText;
+        $num = $this->convertNPTE($this->_messageText);
         $user = User::findOne(['user_id' => $this->_chatId]);
         $ktm = Khatm::findOne(['id' => $this->getReply()['ktm_id']]);
+
         if (is_numeric($num)) {
             switch ($ktm->type) {
                 case Khatm::TYPE_AYA:

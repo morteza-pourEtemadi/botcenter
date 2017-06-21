@@ -468,7 +468,7 @@ msgstr ""
 
 msgctxt "app_2"
 msgid "About Us"
-msgstr "درباره سازنده ربات 🤖"
+msgstr "درباره ما"
 
 msgctxt "app_2"
 msgid "Adding new Khatm is canceled"
@@ -500,7 +500,7 @@ msgstr "سوره مبارکه"
 
 msgctxt "app_2"
 msgid "Joz "
-msgstr "جزء"
+msgstr "جزء "
 
 msgctxt "app_2"
 msgid "Just send numbers"
@@ -517,6 +517,10 @@ msgstr "نیت ختم: "
 msgctxt "app_2"
 msgid "Khatm`s type: "
 msgstr "نوع ختم: "
+
+msgctxt "app_2"
+msgid "Less than a minute"
+msgstr "کمتر از ۱ دقیقه"
 
 msgctxt "app_2"
 msgid "Now select type of the khatm"

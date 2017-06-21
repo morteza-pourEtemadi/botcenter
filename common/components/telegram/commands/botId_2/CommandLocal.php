@@ -92,6 +92,33 @@ abstract class CommandLocal extends Command
         return $key;
     }
 
+    public function convertSingle($string)
+    {
+        $persian = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+        $num = array_search($string, $persian, false);
+
+        return (is_numeric($num) && $num >= 0 && $num <= 9) ? $num : false;
+    }
+
+    public function convertNPTE($string)
+    {
+        $strArr = preg_split('//u', $string, -1, PREG_SPLIT_NO_EMPTY);
+        $n = count($strArr) - 1;
+        $number = 0;
+
+        $err = false;
+        foreach ($strArr as $key => $value) {
+            $digit = $this->convertSingle($value);
+            if ($digit == false) {
+                $err = true;
+                break;
+            }
+            $number += $digit * pow(10, $n - $key);
+        }
+
+        return $err ? false : $number;
+    }
+
     /**
      * Sets inline keyboard based on the parts, decorations and with pagination
      * @param $part
@@ -122,6 +149,13 @@ abstract class CommandLocal extends Command
                 for ($i = 0; $i < count($selectedKeys); $i++) {
                     $keyboard[] = [$selectedKeys[$i]];
                 }
+                break;
+            case 'ktm':
+                $keyboard = [
+                    [$key[0], $key[1]],
+                    [$key[2]],
+                    [$key[3]],
+                ];
                 break;
         }
 

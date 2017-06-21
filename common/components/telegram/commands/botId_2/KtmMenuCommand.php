@@ -26,7 +26,7 @@ class KtmMenuCommand extends CommandLocal
         $ktm = Khatm::findOne(['id' => $input[1]]);
 
         $this->setCache(['x' => $ktm->getTypePart(), 'id' => $input[1]]);
-        $this->setPartKeyboard('ktmMenu');
+        $this->setPartKeyboard('ktmMenu', 1, 'ktm');
         $this->sendMessage(Yii::t('app_2', 'Can I help you?'));
 
         return true;

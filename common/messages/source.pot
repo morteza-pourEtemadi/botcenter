@@ -467,6 +467,10 @@ msgid "Khatm`s type: "
 msgstr ""
 
 msgctxt "app_2"
+msgid "Less than a minute"
+msgstr ""
+
+msgctxt "app_2"
 msgid "Now select type of the khatm"
 msgstr ""
 
