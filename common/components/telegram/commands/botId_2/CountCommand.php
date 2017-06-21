@@ -24,7 +24,8 @@ class CountCommand extends CommandLocal
     public function execute()
     {
         $todayMid = time() - ((time() - 1497904200) % 86400);
-        $users = User::findAll([1]);
+        /* @var User[] $users*/
+        $users = User::find()->all();
         $tUsers = [];
 
         foreach ($users as $user) {
