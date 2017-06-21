@@ -45,16 +45,16 @@ abstract class CommandLocal extends Command
 
     public function addKhatm()
     {
-        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'cancel'), 'addKhatm cancel');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'cancel'), '/addKhatm cancel');
         return $key;
     }
 
     public function khatmTypes()
     {
-        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'Type Aya'), 'addKhatm 1');
-        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'Type Page'), 'addKhatm 2');
-        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'Type Joz'), 'addKhatm 3');
-        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'cancel'), 'addKhatm cancel');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'Type Aya'), '/addKhatm 1');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'Type Page'), '/addKhatm 2');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'Type Joz'), '/addKhatm 3');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'cancel'), '/addKhatm cancel');
 
         return $key;
     }
