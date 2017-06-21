@@ -3,9 +3,9 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=ultimatedevelopers',
+            'dsn' => 'mysql:host=localhost;dbname=bots',
             'username' => 'root',
-            'password' => '',
+            'password' => 'SDKmtz137261!@#',
             'charset' => 'utf8',
         ],
         'mailer' => [
