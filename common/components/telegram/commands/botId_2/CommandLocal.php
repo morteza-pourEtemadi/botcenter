@@ -189,4 +189,17 @@ abstract class CommandLocal extends Command
             'one_time_keyboard' => true,
         ]);
     }
+
+    public function beforeExecute()
+    {
+        if ($this->pattern != '/start') {
+            if ($this->isJoinedChannel() == false) {
+                $message = Yii::t('app_2', 'Please join our channel to be noticed of news and upcoming.');
+                $this->killKeyboard();
+                $this->sendMessage($message);
+                return false;
+            }
+        }
+        return parent::beforeExecute();
+    }
 }

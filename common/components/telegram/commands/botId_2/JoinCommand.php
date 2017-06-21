@@ -57,9 +57,17 @@ class JoinCommand extends CommandLocal
 
     public function isJoined($id)
     {
+        $this->killKeyboard();
+        $this->sendMessage(Yii::t('app_2', 'You have joined this khatm before.'));
+
+        $ktm = Khatm::findOne(['id' => $id]);
+        $message = Yii::t('app_2', 'Khatm`s number ') . $ktm->number . "\n\n";
+        $message .= Yii::t('app_2', 'Khatm`s purpose: ') . $ktm->title . "\n";
+        $message .= Yii::t('app_2', 'current {x} reads till now: ', ['x' => $ktm->getTypePart()]) . ($ktm->current_pointer - 1) . "\n";
+
         $this->setCache(['id' => $id]);
         $this->setPartKeyboard('showJoinedKtm');
-        $this->sendMessage(Yii::t('app_2', 'You have joined this khatm before.'));
+        $this->sendMessage($message);
     }
 
     public function saveData()
@@ -158,7 +166,7 @@ class JoinCommand extends CommandLocal
         $message = Yii::t('app_2', 'Khatm`s number ') . $ktm->number . "\n\n";
         $message .= Yii::t('app_2', 'Khatm`s purpose: ') . $ktm->title . "\n";
         $message .= Yii::t('app_2', 'Khatm`s type: ') . $ktm->getType() . "\n";
-        $message .= Yii::t('app_2', 'current reads till now: ') . $ktm->current_pointer . "\n";
+        $message .= Yii::t('app_2', 'current {x} reads till now: ', ['x' => $ktm->getTypePart()]) . ($ktm->current_pointer - 1) . "\n";
         $message .= Yii::t('app_2', 'age of khatm: ') . ' ' . $this->calcTime(time() - $ktm->created_at) . "\n\n";
         $message .= Yii::t('app_2', 'Are you joining this khatm?');
 

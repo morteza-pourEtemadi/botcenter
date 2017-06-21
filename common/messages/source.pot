@@ -611,7 +611,7 @@ msgid "cancel"
 msgstr ""
 
 msgctxt "app_2"
-msgid "current reads till now: "
+msgid "current {x} reads till now: "
 msgstr ""
 
 msgctxt "app_2"

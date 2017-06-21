@@ -704,8 +704,8 @@ msgid "cancel"
 msgstr "لغو"
 
 msgctxt "app_2"
-msgid "current reads till now: "
-msgstr "میزان قرائت شده تا الان: "
+msgid "current {x} reads till now: "
+msgstr "تعداد {x} قرائت شده تا الان: "
 
 msgctxt "app_2"
 msgid "dismiss the khatm"
