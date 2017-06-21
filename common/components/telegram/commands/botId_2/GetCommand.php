@@ -32,6 +32,7 @@ class GetCommand extends CommandLocal
 
         $current = $this->getCurrent($input[2]);
         $ktm = Khatm::findOne(['id' => $input[2]]);
+        $this->setCache(['x' => $ktm->getTypePart(), 'id' => $ktm->id]);
 
         if ($input[1] == 'dismiss') {
             $this->setCache(['id' => $input[2]]);
@@ -208,8 +209,10 @@ class GetCommand extends CommandLocal
             $this->sendMessage($message);
             usleep(100000);
         }
-
-        $this->setPartKeyboard('ktmMenu');
+        $input = $this->getInput();
+        if ($input[1] == 'dismissF') {
+            $this->setPartKeyboard('ktmMenu', 1, 'ktm');
+        }
         $this->sendMessage(Yii::t('app_2', 'Please read your ayat!'));
     }
 

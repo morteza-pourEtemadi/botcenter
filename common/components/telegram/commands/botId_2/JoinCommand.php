@@ -123,7 +123,7 @@ class JoinCommand extends CommandLocal
             $this->sendMessage(Yii::t('app_2', 'You have added to the khatm'));
 
             $this->setCache(['x' => $ktm->getTypePart(), 'id' => $ktm->id]);
-            $this->setPartKeyboard('ktmMenu');
+            $this->setPartKeyboard('ktmMenu', 1, 'ktm');
             $this->sendMessage(Yii::t('app_2', 'Can I help you?'));
         } else {
             $this->sendMessage(Yii::t('app_2', 'Just send numbers'));
