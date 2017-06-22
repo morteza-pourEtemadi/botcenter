@@ -51,6 +51,7 @@ class CronController extends Controller
                 }
                 $message .= "\n" . Yii::t('app_2', 'Please pay more attention to them');
                 $this->getApi()->sendMessage($user->user_id, $message, null, $this->makeKeyboard($unReads));
+                $this->stdout("User: " . $user->getUniqueUser()->username . " - " . $user->user_id . " -> Warned.\n");
                 $messages++;
             }
         }
