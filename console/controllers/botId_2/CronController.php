@@ -23,6 +23,7 @@ class CronController extends Controller
         $messages = 0;
         $t = time();
         foreach ($users as $user) {
+            $this->stdout(date('Y m d / H i s') . " - Start warning:\n\n");
             if ($messages >= 29) {
                 if ((time() - $t) <= 1) {
                     sleep(1);
@@ -55,6 +56,7 @@ class CronController extends Controller
                 $messages++;
             }
         }
+        $this->stdout("\n" . date('H i s') . " - Finish warning:\n\n");
     }
 
     /**
