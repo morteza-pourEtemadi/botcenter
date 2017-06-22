@@ -627,6 +627,10 @@ msgid "get {x}"
 msgstr ""
 
 msgctxt "app_2"
+msgid "get {x} for {t}"
+msgstr ""
+
+msgctxt "app_2"
 msgid "guide message"
 msgstr ""
 

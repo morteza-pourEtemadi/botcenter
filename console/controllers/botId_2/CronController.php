@@ -35,18 +35,19 @@ class CronController extends Controller
             $unReads = [];
             foreach ($currents as $current) {
                 if ((time() - $current['lup']) > 43200) {
-                    $ktm = Khatm::findOne(['id' => $current['ktm_id']]);
-                    $unReads[] = [
-                        'id' => $ktm->id,
-                        'title' => $ktm->title,
-                        'x' => $ktm->getTypePart(),
-                    ];
+                    if ($ktm = Khatm::findOne(['id' => $current['ktm_id']])) {
+                        $unReads[] = [
+                            'id' => $ktm->id,
+                            'title' => $ktm->title,
+                            'x' => $ktm->getTypePart(),
+                        ];
+                    }
                 }
             }
             if (count($unReads) != 0) {
-                $message = Yii::t('app_2', 'You have not read this khatms for more than 12 hours:') . "\n";
+                $message = Yii::t('app_2', 'You have not read this khatms for more than 12 hours:') . "\n\n";
                 foreach ($unReads as $item) {
-                    $message .= $item['title'] . "\n";
+                    $message .= "- " . $item['title'] . "\n";
                 }
                 $message .= "\n" . Yii::t('app_2', 'Please pay more attention to them');
                 $this->getApi()->sendMessage($user->user_id, $message, null, $this->makeKeyboard($unReads));
