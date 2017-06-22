@@ -2,6 +2,7 @@
 
 namespace console\controllers\botId_2;
 
+use common\components\telegram\types\keyboards\InlineKeyboardButton;
 use Yii;
 use yii\helpers\Json;
 use common\models\bot\Bot;
@@ -31,20 +32,24 @@ class CronController extends Controller
             }
             /* @var User $user */
             $currents = Json::decode($user->current_aya);
-            $unread = [];
+            $unReads = [];
             foreach ($currents as $current) {
                 if ($current['lup'] - time() > 43200) {
                     $ktm = Khatm::findOne(['id' => $current['ktm_id']]);
-                    $unread[] = $ktm->title;
+                    $unReads[] = [
+                        'id' => $ktm->id,
+                        'title' => $ktm->title,
+                        'x' => $ktm->getTypePart(),
+                    ];
                 }
             }
-            if (count($unread) != 0) {
+            if (count($unReads) != 0) {
                 $message = Yii::t('app_2', 'You have not read this khatms for more than 12 hours:') . "\n";
-                foreach ($unread as $item) {
-                    $message .= $item . "\n";
+                foreach ($unReads as $item) {
+                    $message .= $item['title'] . "\n";
                 }
                 $message .= "\n" . Yii::t('app_2', 'Please pay more attention to them');
-                $this->getApi()->sendMessage($user->user_id, $message, null, $this->getKeyboard($user->user_id));
+                $this->getApi()->sendMessage($user->user_id, $message, null, $this->makeKeyboard($unReads));
                 $messages++;
             }
         }
@@ -60,9 +65,21 @@ class CronController extends Controller
         return new TelegramBot(['authKey' => $bot->token]);
     }
 
-    public function getKeyboard($chatId)
+    public function makeKeyboard($ktms)
     {
-        $keyboard = Yii::$app->cache->get('keyboard:2' . $chatId);
-        return isset($keyboard['value']) ? $keyboard['value'] : null;
+        $key = [];
+        $keyboard = [];
+        foreach ($ktms as $ktm) {
+            $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'get {x} for {t}', ['x' => $ktm['x'], 't' => $ktm['title']]), '/get share ' . $ktm['id']);
+        }
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'back to main menu'), '/start');
+
+        foreach ($key as $item) {
+            $keyboard[] = [$item];
+        }
+        $inline = [
+            'inline_keyboard' => $keyboard
+        ];
+        return $inline;
     }
 }
