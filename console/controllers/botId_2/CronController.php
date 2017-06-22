@@ -34,7 +34,7 @@ class CronController extends Controller
             $currents = Json::decode($user->current_aya);
             $unReads = [];
             foreach ($currents as $current) {
-                if ($current['lup'] - time() > 43200) {
+                if ((time() - $current['lup']) > 43200) {
                     $ktm = Khatm::findOne(['id' => $current['ktm_id']]);
                     $unReads[] = [
                         'id' => $ktm->id,
