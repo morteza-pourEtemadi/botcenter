@@ -25,7 +25,7 @@ class VoteLinkCommand extends CommandLocal
         $input = explode(' ', $this->_messageText);
         if (isset($input[1])) {
             $item = X::findOne(['id' => $input[1]]);
-            $url = 'https://tlgrm.me/' . $this->bot->username . '?start=' . $item->code;
+            $url = 'https://t.me/' . $this->bot->username . '?start=' . $item->code;
 
             $message = Yii::t('app_1', "Please vote for my clip. It`s an exciting competition with great prizes\n\nClick the following link to watch my dubsmash and vote for it\n");
             $message .= $url;

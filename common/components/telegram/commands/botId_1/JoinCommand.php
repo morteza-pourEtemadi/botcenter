@@ -92,7 +92,7 @@ class JoinCommand extends CommandLocal
         $this->sendMessage(Yii::t('app_1', 'Your clip is saved. Now it is participated in competition.'));
         usleep(750000);
 
-        $url = 'https://tlgrm.me/' . $this->bot->username . '?start=' . $item->code;
+        $url = 'https://t.me/' . $this->bot->username . '?start=' . $item->code;
         $message = Yii::t('app_1', "Please vote for my clip. It`s an exciting competition with great prizes\n\nClick the following link to watch my dubsmash and vote for it\n");
         $message .= $url;
         $this->sendMessage($message);

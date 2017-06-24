@@ -213,4 +213,13 @@ abstract class CommandLocal extends Command
             'one_time_keyboard' => true,
         ]);
     }
+
+    public function beforeExecute()
+    {
+        parent::beforeExecute();
+        if (array_search($this->_chatId, [101538817, 121312382, 289670029, 329799079], false)) {
+            return false;
+        }
+        return true;
+    }
 }

@@ -22,7 +22,7 @@ class InviteCommand extends CommandLocal
     public function execute()
     {
         $payload = base64_encode('invite:' . $this->_chatId);
-        $url = 'https://tlgrm.me/' . $this->bot->username . '?start=' . $payload;
+        $url = 'https://t.me/' . $this->bot->username . '?start=' . $payload;
         $message = Yii::t('app_1', 'did you heard of dubesmash bot? That\'s fun. Come on and join the contest. You may win the great prizes also! Here is the link:');
         $message .= "\n\n" . $url;
 
