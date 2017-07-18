@@ -176,8 +176,6 @@ class Parser extends Model
         }
 
         $command = $commands[$commandIndex];
-        var_dump($command);
-        exit();
         $command->run();
         return true;
     }
