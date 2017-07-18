@@ -34,33 +34,14 @@ class ApiController extends Controller
     public function actionHook($tokenId, $tokenString)
     {
         if ($this->getBot($tokenId, $tokenString) === null) {
-            $trans = [
-                'Join Quran Khatm' . ' 📗' => '/join',
-                'مشارکت در ختم قرآن' . ' 📗' => '/join',
-                'See khatms lists' . ' 📑' => '/join',
-                'مشاهده لیست ختم های قرآن' . ' 📑' => '/join',
-                'Random Aya' . ' 📤' => '/random',
-                'آیه تصادفی' . ' 📤' => '/random',
-                'Hadith of the day' . ' 📜' => '/hadith',
-                'حدیث روز' . ' 📜' => '/hadith',
-                'Guide' . ' 📚' => '/help',
-                'راهنما' . ' 📚' => '/help',
-                'About Us' . ' 🔖' => '/about',
-                'درباره ما' . ' 🔖' => '/about',
-            ];
             $bot = new Bot([
-                'bot_id' => 2,
-                'telegram_id' => 210807040,
-                'first_name' => 'ختم قرآن',
-                'username' => 'PocketQuranBot',
-                'token' => '210807040:AAED2LjXbeyZDaHSyDGPxEo2OW1iliadqOU',
+                'bot_id' => 16,
+                'telegram_id' => 12312,
+                'first_name' => 'myTestBot',
+                'username' => 'morteza_test_bot',
+                'token' => '227461477:AAFklo5LR-WyZFRVnmJYz2-CVWdgMBwJmUc',
                 'type' => Bot::TYPE_IN_APP_PAYMENT,
-                'priceString' => json_encode([
-                    'objects' => [
-                        'support' => [1000, 2000, 5000, 10000]
-                    ]
-                ]),
-                'translations' => yii\helpers\Json::encode($trans),
+                'translations' => '[]',
             ]);
             var_dump($bot->save());
             exit('132');
