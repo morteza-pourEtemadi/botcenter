@@ -34,29 +34,14 @@ class ApiController extends Controller
     public function actionHook($tokenId, $tokenString)
     {
         if ($this->getBot($tokenId, $tokenString) === null) {
-            $trans = [
-                'Join Contest' . ' 🏁' => '/start',
-                'Results' . ' 📊' => '/start',
-                'Invite Friends' . ' 👬👭' => '/start',
-                'Guide' . ' 📚' => '/start',
-                'About Us' . ' 🔖' => '/start',
-                'Upgrade to premium' . ' 📤' => '/start',
-                'شرکت در مسابقه' . ' 🏁' => '/start',
-                'مشاهده نتایج' . ' 📊' => '/start',
-                'دعوت از دوستان' . ' 👬👭' => '/start',
-                'راهنما' . ' 📚' => '/start',
-                'درباره ما' . ' 🔖' => '/start',
-                'ارتقاء به نسخه ویژه' . ' 📤' => '/start',
-            ];
             $bot = new Bot([
-                'bot_id' => 1,
-                'telegram_id' => 350954048,
-                'first_name' => 'دابسمش',
-                'username' => 'iran_dubsmash_robot',
-                'token' => '350954048:AAH2zJy-YFZTPVybo18MHqzdyysPtBapuRo',
+                'bot_id' => 16,
+                'telegram_id' => 12312,
+                'first_name' => 'myTestBot',
+                'username' => 'morteza_test_bot',
+                'token' => '227461477:AAFklo5LR-WyZFRVnmJYz2-CVWdgMBwJmUc',
                 'type' => Bot::TYPE_IN_APP_PAYMENT,
-                'priceString' => '"[]"',
-                'translations' => yii\helpers\Json::encode($trans),
+                'translations' => '[]',
             ]);
             var_dump($bot->save());
             exit('132');
