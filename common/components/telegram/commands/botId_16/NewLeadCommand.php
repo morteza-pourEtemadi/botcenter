@@ -54,8 +54,7 @@ class NewLeadCommand extends CommandLocal
                 $lead->status = Leads::STATUS_PENDING;
                 $lead->save(false);
 
-                $this->api->sendMessage(88123885, Yii::t('app_16', 'new placement to confirm'));
-                $this->api->sendMessage(104098344, Yii::t('app_16', 'new placement to confirm'));
+                $this->api->sendMessage(101538817, Yii::t('app_16', 'new placement to confirm'));
 
                 $this->killReply();
                 $this->setPartKeyboard('main');

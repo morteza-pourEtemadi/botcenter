@@ -15,7 +15,7 @@ use common\component\localStorage\TelegramBucket;
 /**
  * A set of common functionality among Commands.
  *
- * @property \common\component\TelegramBot $api
+ * @property \common\components\TelegramBot $api
  *
  * @method mixed sendMessage($text, $replyMessageId = null)
  *
