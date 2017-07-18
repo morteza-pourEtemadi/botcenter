@@ -2,10 +2,10 @@
 
 namespace common\components\telegram\commands\botId_1;
 
-use common\models\bot\botId_1\User;
-use common\models\bot\botId_1\Vote;
-use common\models\bot\botId_1\X;
 use Yii;
+use common\models\bot\botId_1\X;
+use common\models\bot\botId_1\Vote;
+use common\models\bot\botId_1\User;
 
 /**
  * Results Command for showing results in general and details
