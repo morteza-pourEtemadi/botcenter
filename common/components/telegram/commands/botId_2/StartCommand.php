@@ -31,19 +31,20 @@ class StartCommand extends CommandLocal
                 $user->type = User::TYPE_OWNER;
             }
             $user->save();
-            $user->getUniqueUser()->setSettings('language', 1);
-            Yii::$app->language = 'fa-IR';
 
             $subscriber = new Subscribers([
                 'user_id' => $this->_chatId,
                 'bot_id' => $this->bot->bot_id,
             ]);
             $subscriber->save();
+
+            $user->getUniqueUser()->setSettings('language', 1);
+            Yii::$app->language = 'fa-IR';
         }
 
         if ($this->isJoinedChannel() == false) {
             $message = Yii::t('app_2', 'Please join our channel to be noticed of news and upcoming.');
-            $this->killKeyboard();
+            $this->setPartKeyboard('start');
             $this->sendMessage($message);
             return true;
         }

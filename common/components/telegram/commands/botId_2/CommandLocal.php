@@ -18,6 +18,14 @@ use common\components\telegram\types\keyboards\InlineKeyboardButton;
  */
 abstract class CommandLocal extends Command
 {
+    public function start()
+    {
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'Channel Link'), '', 'https://t.me/UD_newsletter');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_2', 'I have joined'), '/start');
+
+        return $key;
+    }
+
     public function getKhatms()
     {
         $items = $this->getCache()['ktm_ids'];
@@ -94,10 +102,16 @@ abstract class CommandLocal extends Command
 
     public function convertSingle($string)
     {
-        $persian = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
-        $num = array_search($string, $persian, false);
+        $sets[] = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+        $sets[] = ['۰', '١', '۲', '۳', '٤', '۵', '۶', '۷', '۸', '۹'];
 
-        return (is_numeric($num) && $num >= 0 && $num <= 9) ? $num : false;
+        foreach ($sets as $set) {
+            $num = array_search($string, $set, false);
+            if (is_numeric($num) && $num >= 0 && $num <= 9) {
+                break;
+            }
+        }
+        return (isset($num) && is_numeric($num) && $num >= 0 && $num <= 9) ? $num : false;
     }
 
     public function convertNPTE($string)
@@ -197,7 +211,7 @@ abstract class CommandLocal extends Command
         if ($this->pattern != '/start') {
             if ($this->isJoinedChannel() == false) {
                 $message = Yii::t('app_2', 'Please join our channel to be noticed of news and upcoming.');
-                $this->killKeyboard();
+                $this->setPartKeyboard('start');
                 $this->sendMessage($message);
                 return false;
             }

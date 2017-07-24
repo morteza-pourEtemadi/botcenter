@@ -53,7 +53,7 @@ class GetCommand extends CommandLocal
                 $this->sendMessage(Yii::t('app_2', 'This khatm is finished thanks to God. Please join another khatm.'));
                 return true;
             }
-            $this->setCurrent($input[2], $current['cp'] + $current['xpd'], 0);
+            $this->setCurrent($input[2], $ktm->current_pointer, 0);
             $current = $this->getCurrent($input[2]);
             $ktm->current_pointer += $current['xpd'];
             $ktm->save();
