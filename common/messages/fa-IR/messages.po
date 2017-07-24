@@ -21,6 +21,10 @@ msgid "Confirm your email address"
 msgstr ""
 
 msgctxt "app"
+msgid "Currently we don't support your message media content type."
+msgstr ""
+
+msgctxt "app"
 msgid "Finish >>"
 msgstr ""
 
@@ -167,6 +171,10 @@ msgid "Invite Friends"
 msgstr "دعوت از دوستان"
 
 msgctxt "app_1"
+msgid "Item reported successfully"
+msgstr "مورد گزارش شد"
+
+msgctxt "app_1"
 msgid "No Caption"
 msgstr ""
 
@@ -286,6 +294,10 @@ msgid "What can I do for you?"
 msgstr ""
 
 msgctxt "app_1"
+msgid "What do you do"
+msgstr ""
+
+msgctxt "app_1"
 msgid ""
 "You are a normal user. To use premium features, please upgrade your account "
 "first"
@@ -334,6 +346,12 @@ msgstr ""
 
 msgctxt "app_1"
 msgid ""
+"You vote is collected. You have earned diamonds according to guide! If you "
+"have not read it yet, Please do it!"
+msgstr ""
+
+msgctxt "app_1"
+msgid ""
 "Your account and the one which requested the diamonds is not same. Please "
 "pay more attention"
 msgstr ""
@@ -354,6 +372,10 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "Your have {d} diamonds"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Your score decreased by 100 points for abusing report ability on video:"
 msgstr ""
 
 msgctxt "app_1"
@@ -412,6 +434,14 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "number of loves:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "release this"
+msgstr ""
+
+msgctxt "app_1"
+msgid "report this"
 msgstr ""
 
 msgctxt "app_1"
@@ -486,6 +516,10 @@ msgstr ""
 "در این قسمت می توانید عملیات های مربوط به این ختم قرآن را مشاهده نمایید"
 
 msgctxt "app_2"
+msgid "Channel Link"
+msgstr "لینک کانال"
+
+msgctxt "app_2"
 msgid "Enter how many {x} you want to read daily?"
 msgstr "می خواهید در هر دوره چه تعداد {x} قرائت نمایید؟"
 
@@ -500,6 +534,10 @@ msgstr "حدیث روز"
 msgctxt "app_2"
 msgid "Holy sura"
 msgstr "سوره مبارکه"
+
+msgctxt "app_2"
+msgid "I have joined"
+msgstr "در کانال عضو شدم"
 
 msgctxt "app_2"
 msgid "Joz "
@@ -558,7 +596,8 @@ msgstr ""
 "- مدت زمان انتظار جهت رفع مشکل و دستورالعمل های لازم\n"
 "- و ...\n"
 "لطفا در کانال @UD_newsletter عضو شوید.\n"
-"پس از عضویت به ربات برگشته و /start را ارسال نمایید 🙏\n"
+"پس از عضویت به ربات برگشته و روی دکمه «در کانال عضو شدم» کلیک نمایید 🙏\n"
+"\n"
 "\n"
 "ما هم مانند شما از اسپم بدمان می آید. مطالب اسپم، تبلیغات، تبادل و ... هرگز "
 "در این کانال قرار داده نخواهد شد. پس با خیال راحت عضو شوید. 😉"

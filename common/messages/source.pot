@@ -19,6 +19,10 @@ msgid "Confirm your email address"
 msgstr ""
 
 msgctxt "app"
+msgid "Currently we don't support your message media content type."
+msgstr ""
+
+msgctxt "app"
 msgid "Finish >>"
 msgstr ""
 
@@ -147,6 +151,10 @@ msgid "Invite Friends"
 msgstr ""
 
 msgctxt "app_1"
+msgid "Item reported successfully"
+msgstr ""
+
+msgctxt "app_1"
 msgid "No Caption"
 msgstr ""
 
@@ -255,6 +263,10 @@ msgid "What can I do for you?"
 msgstr ""
 
 msgctxt "app_1"
+msgid "What do you do"
+msgstr ""
+
+msgctxt "app_1"
 msgid "You are a normal user. To use premium features, please upgrade your account first"
 msgstr ""
 
@@ -287,6 +299,10 @@ msgid "You have used the bot before. So this invitation is not count!"
 msgstr ""
 
 msgctxt "app_1"
+msgid "You vote is collected. You have earned diamonds according to guide! If you have not read it yet, Please do it!"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Your account and the one which requested the diamonds is not same. Please pay more attention"
 msgstr ""
 
@@ -304,6 +320,10 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "Your have {d} diamonds"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Your score decreased by 100 points for abusing report ability on video:"
 msgstr ""
 
 msgctxt "app_1"
@@ -360,6 +380,14 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "number of loves:"
+msgstr ""
+
+msgctxt "app_1"
+msgid "release this"
+msgstr ""
+
+msgctxt "app_1"
+msgid "report this"
 msgstr ""
 
 msgctxt "app_1"
@@ -431,6 +459,10 @@ msgid "Can I help you?"
 msgstr ""
 
 msgctxt "app_2"
+msgid "Channel Link"
+msgstr ""
+
+msgctxt "app_2"
 msgid "Enter how many {x} you want to read daily?"
 msgstr ""
 
@@ -444,6 +476,10 @@ msgstr ""
 
 msgctxt "app_2"
 msgid "Holy sura"
+msgstr ""
+
+msgctxt "app_2"
+msgid "I have joined"
 msgstr ""
 
 msgctxt "app_2"
