@@ -607,7 +607,7 @@ msgid "You have no access to do changes here!"
 msgstr ""
 
 msgctxt "app_2"
-msgid "You have not read this khatms for more than 12 hours:"
+msgid "You have not read this khatms for more than 24 hours:"
 msgstr ""
 
 msgctxt "app_2"

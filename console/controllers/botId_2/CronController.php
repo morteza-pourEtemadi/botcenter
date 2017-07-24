@@ -22,8 +22,8 @@ class CronController extends Controller
         $users = User::find()->all();
         $messages = 0;
         $t = time();
+        $this->stdout(date('Y m d / H i s') . " - Start warning:\n\n");
         foreach ($users as $user) {
-            $this->stdout(date('Y m d / H i s') . " - Start warning:\n\n");
             if ($messages >= 29) {
                 if ((time() - $t) <= 1) {
                     sleep(1);
@@ -32,21 +32,23 @@ class CronController extends Controller
                 }
             }
             /* @var User $user */
-            $currents = Json::decode($user->current_aya);
+            $currents = isset($user->current_aya) ? (is_array(Json::decode($user->current_aya)) ? Json::decode($user->current_aya) : []) : [];
             $unReads = [];
             foreach ($currents as $current) {
-                if ((time() - $current['lup']) > 43200) {
-                    if ($ktm = Khatm::findOne(['id' => $current['ktm_id']])) {
-                        $unReads[] = [
-                            'id' => $ktm->id,
-                            'title' => $ktm->title,
-                            'x' => $ktm->getTypePart(),
-                        ];
+                if (isset($current['lup'])) {
+                    if ((time() - $current['lup']) > 86400) {
+                        if ($ktm = Khatm::findOne(['id' => $current['ktm_id']])) {
+                            $unReads[] = [
+                                'id' => $ktm->id,
+                                'title' => $ktm->title,
+                                'x' => $ktm->getTypePart(),
+                            ];
+                        }
                     }
                 }
             }
             if (count($unReads) != 0) {
-                $message = Yii::t('app_2', 'You have not read this khatms for more than 12 hours:') . "\n\n";
+                $message = Yii::t('app_2', 'You have not read this khatms for more than 24 hours:') . "\n\n";
                 foreach ($unReads as $item) {
                     $message .= "- " . $item['title'] . "\n";
                 }
