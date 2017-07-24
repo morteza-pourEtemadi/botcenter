@@ -53,9 +53,13 @@ class CronController extends Controller
                     $message .= "- " . $item['title'] . "\n";
                 }
                 $message .= "\n" . Yii::t('app_2', 'Please pay more attention to them');
-                $this->getApi()->sendMessage($user->user_id, $message, null, $this->makeKeyboard($unReads));
-                $this->stdout("User: " . $user->getUniqueUser()->username . " - " . $user->user_id . " -> Warned.\n");
-                $messages++;
+                $sent = $this->getApi()->sendMessage($user->user_id, $message, null, $this->makeKeyboard($unReads));
+                if ($sent->ok == false && $sent->error_code == 403) {
+                    $this->stdout("B - User: " . $user->getUniqueUser()->username . " - " . $user->user_id . " -> Blocked Bot\.\n");
+                } else {
+                    $this->stdout("W - User: " . $user->getUniqueUser()->username . " - " . $user->user_id . " -> Warned.\n");
+                    $messages++;
+                }
             }
         }
         $this->stdout("\n" . date('H i s') . " - Finish warning:\n\n");
