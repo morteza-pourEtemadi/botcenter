@@ -2,7 +2,9 @@
 
 namespace console\controllers\botId_2;
 
+use common\models\bot\Subscribers;
 use yii\console\Controller;
+use common\models\bot\botId_2\User;
 use common\models\bot\botId_2\Hadith;
 use common\models\bot\botId_2\Narratives;
 
@@ -12,6 +14,21 @@ use common\models\bot\botId_2\Narratives;
  */
 class DatabaseController extends Controller
 {
+    public function actionUniqueFix()
+    {
+        $users = User::find()->all();
+        foreach ($users as $user) {
+            /* @var User $user */
+            if ($user->getUniqueUser() == null) {
+                $subscriber = new Subscribers([
+                    'user_id' => $user->user_id,
+                    'bot_id' => 2,
+                ]);
+                $subscriber->save();
+            }
+        }
+    }
+
     public function actionHadith()
     {
         $narratives = Narratives::find()->all();
