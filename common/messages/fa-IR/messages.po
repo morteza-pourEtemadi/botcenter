@@ -834,6 +834,10 @@ msgstr ""
 "حداقل مقدار مجاز، 1 صفحه می باشد.لطفا عددی بزرگتر یا مساوی 1 انتخاب نمایید"
 
 msgctxt "app_2"
+msgid "obligatory sajda"
+msgstr "- «سجده واجب»"
+
+msgctxt "app_2"
 msgid "page"
 msgstr " صفحه "
 
@@ -844,6 +848,10 @@ msgstr "قرائت کرده و انصراف می دهم"
 msgctxt "app_2"
 msgid "read my share"
 msgstr "سهم خود را قرائت کردم"
+
+msgctxt "app_2"
+msgid "recommended sajda"
+msgstr "- «سجده مستحب»"
 
 msgctxt "app_2"
 msgid "the khatm dismissed"

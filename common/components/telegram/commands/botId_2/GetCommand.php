@@ -176,6 +176,9 @@ class GetCommand extends CommandLocal
 
     public function sendShare($aya)
     {
+        $recommended = [1160, 1722, 1951, 2138, 2308, 2613, 2672, 2915, 3185, 3992, 5905];
+        $obligatory = [3518, 4256, 4846, 6125];
+
         $j = 0;
         $limit = count($aya) - 1;
 
@@ -201,16 +204,23 @@ class GetCommand extends CommandLocal
 
         unset($aya[$limit]);
         $this->killKeyboard();
-        $this->sendMessage($sm);
         $this->sendMessage(Yii::t('app_2', 'aoozo b Allah'));
         $this->sendMessage(Yii::t('app_2', 'besme Allah'));
 
         foreach ($aya as $item) {
-            $message = $item->text . "\n\n";
+            $message = '';
+            if (array_search($item->index, $recommended, false) !== false) {
+                $message = '۩ ' . Yii::t('app_2', 'recommended sajda') . "\n\n";
+            } elseif (array_search($item->index, $obligatory, false) !== false) {
+                $message = '۩ ' . Yii::t('app_2', 'obligatory sajda') . "\n\n";
+            }
+
+            $message.= $item->text . "  ﴿" . $item->aya . "﴾" . "\n\n";
             $message.= $item->translation;
             $this->sendMessage($message);
             usleep(100000);
         }
+        $this->sendMessage($sm);
         $input = $this->getInput();
         if ($input[1] != 'dismissF') {
             $this->setPartKeyboard('ktmMenu', 1, 'ktm');

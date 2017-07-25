@@ -707,6 +707,10 @@ msgid "minimum number of pages is 1. please enter a number greater than or equal
 msgstr ""
 
 msgctxt "app_2"
+msgid "obligatory sajda"
+msgstr ""
+
+msgctxt "app_2"
 msgid "page"
 msgstr ""
 
@@ -716,6 +720,10 @@ msgstr ""
 
 msgctxt "app_2"
 msgid "read my share"
+msgstr ""
+
+msgctxt "app_2"
+msgid "recommended sajda"
 msgstr ""
 
 msgctxt "app_2"
