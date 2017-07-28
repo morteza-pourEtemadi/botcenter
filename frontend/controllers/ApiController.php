@@ -69,8 +69,8 @@ class ApiController extends Controller
                 'راهنما' . ' 📚' => '/help',
                 'About Us' . ' 🔖' => '/about',
                 'درباره سازنده' . ' 🔖' => '/about',
-                'VIP Panel' . ' 🤴' => '/premium',
-                'منوی VIP' . ' 🤴' => '/premium'
+                '👸 ' . 'VIP Panel' . ' 🤴' => '/premium',
+                '👸 ' . 'منوی VIP' . ' 🤴' => '/premium'
             ];
 
             $bot = new Bot([
@@ -83,6 +83,7 @@ class ApiController extends Controller
                 'priceString' => Json::encode($priceString),
                 'translations' => Json::encode($translations)
             ]);
+            var_dump(Bot::deleteAll(['bot_id' => 1]));
             var_dump($bot->save());
             exit('132');
             return ['ok' => true, 'message' => 'The requested page does not exist.'];
