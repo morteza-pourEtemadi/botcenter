@@ -32,42 +32,98 @@ class VoteCommand extends CommandLocal
         }
         $item = X::findOne(['code' => $input[2]]);
         $user = User::findOne(['user_id' => $this->_chatId]);
+        $seen = Json::decode($user->seenXs);
         $itemOwner = User::findOne(['user_id' => $item->creator_id]);
-        $vote = new Vote([
-            'voter' => $user->id,
-            'item' => $item->id,
-        ]);
+        if (array_search($item->id, $seen, false) === false) {
+            $vote = new Vote([
+                'voter' => $user->id,
+                'item' => $item->id,
+            ]);
 
-        switch ($input[1]) {
-            case '1':
-                $user->coins += 2;
-                $itemOwner->Xs_loves += 1;
-                $vote->type = Vote::TYPE_LOVE;
-                break;
-            case '2':
-                $user->coins += 1;
-                $itemOwner->Xs_likes += 1;
-                $vote->type = Vote::TYPE_LIKE;
-                break;
-            case '3':
-                $user->bonus_score -= 2;
-                $itemOwner->Xs_dislikes += 1;
-                $vote->type = Vote::TYPE_DISLIKE;
-                break;
-            case '4':
-                $user->bonus_score -= 4;
-                $itemOwner->Xs_hates += 1;
-                $vote->type = Vote::TYPE_HATE;
-                break;
-            case '5':
-                $vote->type = Vote::TYPE_REPORT;
-                $this->checkReport($item);
-                break;
+            switch ($input[1]) {
+                case '1':
+                    $user->coins += 2;
+                    $itemOwner->Xs_loves += 1;
+                    $vote->type = Vote::TYPE_LOVE;
+                    break;
+                case '2':
+                    $user->coins += 1;
+                    $itemOwner->Xs_likes += 1;
+                    $vote->type = Vote::TYPE_LIKE;
+                    break;
+                case '3':
+                    $user->bonus_score -= 2;
+                    $itemOwner->Xs_dislikes += 1;
+                    $vote->type = Vote::TYPE_DISLIKE;
+                    break;
+                case '4':
+                    $user->bonus_score -= 4;
+                    $itemOwner->Xs_hates += 1;
+                    $vote->type = Vote::TYPE_HATE;
+                    break;
+                case '5':
+                    $vote->type = Vote::TYPE_REPORT;
+                    $this->checkReport($item);
+                    break;
+            }
+            $vote->save();
+            $user->save();
+            $itemOwner->save();
+        } else {
+            $vote = Vote::findOne(['voter' => $user->id, 'item' => $item->id]);
+            switch ($vote->type) {
+                case Vote::TYPE_LOVE:
+                    $user->coins -= 2;
+                    $itemOwner->Xs_loves -= 1;
+                    break;
+                case Vote::TYPE_LIKE:
+                    $user->coins -= 1;
+                    $itemOwner->Xs_likes -= 1;
+                    break;
+                case Vote::TYPE_DISLIKE:
+                    $user->bonus_score += 2;
+                    $itemOwner->Xs_dislikes -= 1;
+                    break;
+                case Vote::TYPE_HATE:
+                    $user->bonus_score += 4;
+                    $itemOwner->Xs_hates -= 1;
+                    break;
+                case Vote::TYPE_REPORT:
+                    $this->setMainKeyboard();
+                    $this->sendMessage(Yii::t('app_1', 'You have reported this clip before.'));
+                    return false;
+            }
+
+            switch ($input[1]) {
+                case '1':
+                    $user->coins += 2;
+                    $itemOwner->Xs_loves += 1;
+                    $vote->type = Vote::TYPE_LOVE;
+                    break;
+                case '2':
+                    $user->coins += 1;
+                    $itemOwner->Xs_likes += 1;
+                    $vote->type = Vote::TYPE_LIKE;
+                    break;
+                case '3':
+                    $user->bonus_score -= 2;
+                    $itemOwner->Xs_dislikes += 1;
+                    $vote->type = Vote::TYPE_DISLIKE;
+                    break;
+                case '4':
+                    $user->bonus_score -= 4;
+                    $itemOwner->Xs_hates += 1;
+                    $vote->type = Vote::TYPE_HATE;
+                    break;
+                case '5':
+                    $vote->type = Vote::TYPE_REPORT;
+                    $this->checkReport($item);
+                    break;
+            }
+            $vote->save();
+            $user->save();
+            $itemOwner->save();
         }
-        $vote->save();
-        $user->save();
-        $itemOwner->save();
-
         $this->killKeyboard();
         $this->sendMessage(Yii::t('app_1', 'You vote is collected. You have earned diamonds according to guide! If you have not read it yet, Please do it!'));
 

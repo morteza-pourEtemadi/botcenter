@@ -307,6 +307,10 @@ msgid "You have not participate in competition yet. Please join the contest!"
 msgstr ""
 
 msgctxt "app_1"
+msgid "You have reported this clip before."
+msgstr ""
+
+msgctxt "app_1"
 msgid "You have successfully upgraded to premium user. You are rewarded 25 diamonds for joining the league! enjoy..."
 msgstr ""
 
