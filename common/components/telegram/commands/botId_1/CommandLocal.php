@@ -183,7 +183,7 @@ abstract class CommandLocal extends Command
         $selectedKeys = [];
         $keyboard = [];
 
-        if (count($key) > 5) {
+        if (count($key) > 5 && $part != 'voteItem') {
             $endButton = end($key);
             $n = count($key) - 1;
             unset($key[$n]);
