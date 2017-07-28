@@ -24,7 +24,7 @@ class BuyCoinsCommand extends CommandLocal
      */
     public function execute()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         $priceString = Json::decode($this->bot->priceString);
         if (isset($input[1])) {
             $user = User::findOne(['user_id' => $this->_chatId]);
@@ -38,10 +38,10 @@ class BuyCoinsCommand extends CommandLocal
                 $receipt->status = Receipt::STATUS_PAYED_USED;
                 $receipt->save();
 
-                $this->setMainKeyboard();
+                $this->setPartKeyboard('premiumPanel');
                 $this->sendMessage(Yii::t('app_1', '{c} Diamonds are added to your account successfully. Enjoy them!', ['c' => $coin['count']]));
             } else {
-                $this->setMainKeyboard();
+                $this->setPartKeyboard('premiumPanel');
                 $this->sendMessage(Yii::t('app_1', 'Your account and the one which requested the diamonds is not same. Please pay more attention'));
             }
         } else {

@@ -24,7 +24,7 @@ class ShowItemCommand extends CommandLocal
      */
     public function execute()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         if (isset($input[1]) == false) {
             $item = $this->getItem();
         } else {
@@ -39,7 +39,7 @@ class ShowItemCommand extends CommandLocal
             $caption .= $item->caption;
 
             $this->setCache(['code' => $item->code, 'spec' => $item->specialOptions]);
-            $this->setPartKeyboard('voteItem');
+            $this->setPartKeyboard('voteItem', 1, 'vote');
             $this->sendFile($item->file_id, $caption);
 
             $seenXs = Json::decode($user->seenXs);
@@ -47,7 +47,7 @@ class ShowItemCommand extends CommandLocal
             $user->seenXs = Json::encode($seenXs);
             $user->save();
         } else {
-            $this->setPartKeyboard('competition');
+            $this->setPartKeyboard('competition', 1, 'comp');
             $this->sendMessage(Yii::t('app_1', 'There is no more clips to watch! Please visit again later.'));
         }
         return true;

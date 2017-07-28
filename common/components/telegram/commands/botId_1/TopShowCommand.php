@@ -24,7 +24,7 @@ class TopShowCommand extends CommandLocal
      */
     public function execute()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         if (isset($input[1])) {
             if (isset($input[2])) {
                 $user = User::findOne(['user_id' => $this->_chatId]);
@@ -93,20 +93,20 @@ class TopShowCommand extends CommandLocal
     {
         $plans = [
             0 => [
-                'time' => 3600,
-                'coin' => 20
+                'time' => 7200,
+                'coin' => 30
             ],
             1 => [
-                'time' => 7200,
-                'coin' => 40
+                'time' => 10800,
+                'coin' => 45
             ],
             2 => [
-                'time' => 10800,
+                'time' => 14400,
                 'coin' => 60
             ],
             3 => [
-                'time' => 18000,
-                'coin' => 90
+                'time' => 21600,
+                'coin' => 80
             ],
         ];
 

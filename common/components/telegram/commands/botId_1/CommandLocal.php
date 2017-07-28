@@ -21,6 +21,26 @@ use common\components\telegram\types\keyboards\InlineKeyboardButton;
  */
 abstract class CommandLocal extends Command
 {
+    public function guide()
+    {
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Prizes'), '/help 1');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'How to play'), '/help 2');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Upgrading'), '/help 3');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Extra points'), '/help 4');
+
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'back to main menu'), '/start');
+
+        return $key;
+    }
+
+    public function extra()
+    {
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'get extra points'), '/extra');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'back to main menu'), '/start');
+
+        return $key;
+    }
+
     public function showItemStart()
     {
         $code = $this->getCache()['code'];
@@ -57,6 +77,8 @@ abstract class CommandLocal extends Command
             $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'hate ' . '🤢'), '/vote 4 ' . $code);
         }
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', '⚠️' . ' report this ' . '⚠️'), '/vote 5 ' . $code);
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'skip this clip'), '/showItem');
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'back to menu'), '/contestMenu');
 
         return $key;
     }
@@ -109,6 +131,10 @@ abstract class CommandLocal extends Command
 
     public function premiumPanel()
     {
+        $user = User::findOne(['user_id' => $this->_chatId]);
+        if ($user->type == User::TYPE_NORMAL) {
+            $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Upgrade to premium') . ' 📤', '/upgrade');
+        }
         $key[] = InlineKeyboardButton::setNewKeyButton('💎 ' . Yii::t('app_1', 'Buy Diamonds') . ' 💎', '/buyCoins');
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'Show in the top') . ' 📹⤴️', '/topShow');
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'No hate button') . ' 💝', '/specBtn');
@@ -136,9 +162,10 @@ abstract class CommandLocal extends Command
         $id = $this->getCache()['id'];
         $cmd = $this->getCache()['cmd'];
         $plans = $this->getCache()['plans'];
-        for ($i = 0; $i < 4; $i++) {
+        for ($i = 0; $i < 3; $i++) {
             $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', '{d} for {t}', ['d' => $plans[$i]['coin'] . ' 💎', 't' => $this->calcTime($plans[$i]['time'])]), '/' . $cmd . ' ' . $id . ' ' . $i);
         }
+        $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', '😍 {d} for {t} 😍', ['d' => $plans[$i]['coin'] . ' 💎', 't' => $this->calcTime($plans[$i]['time'])]), '/' . $cmd . ' ' . $id . ' ' . $i);
         $key[] = InlineKeyboardButton::setNewKeyButton(Yii::t('app_1', 'cancel'), '/premium');
 
         return $key;
@@ -175,6 +202,32 @@ abstract class CommandLocal extends Command
                     $keyboard[] = [$selectedKeys[$i]];
                 }
                 break;
+            case 'comp':
+                $keyboard[] = [$selectedKeys[0], $selectedKeys[1]];
+                $keyboard[] = [$selectedKeys[2], $selectedKeys[3]];
+                $keyboard[] = [$selectedKeys[4]];
+                break;
+            case 'vote':
+                $spec = Json::decode($this->getCache()['spec']);
+                if (isset($spec['btn']) == false || $spec['btn']['time'] < time()) {
+                    $keyboard[] = [$selectedKeys[0], $selectedKeys[1]];
+                    $keyboard[] = [$selectedKeys[2], $selectedKeys[3]];
+                    $keyboard[] = [$selectedKeys[4], $selectedKeys[5]];
+                    $keyboard[] = [$selectedKeys[6]];
+                } else {
+                    $keyboard[] = [$selectedKeys[0], $selectedKeys[1]];
+                    $keyboard[] = [$selectedKeys[2], $selectedKeys[3]];
+                    $keyboard[] = [$selectedKeys[4]];
+                    $keyboard[] = [$selectedKeys[5]];
+                }
+
+                break;
+            case 'guide':
+                $keyboard[] = [$selectedKeys[0]];
+                $keyboard[] = [$selectedKeys[1], $selectedKeys[2]];
+                $keyboard[] = [$selectedKeys[3]];
+                $keyboard[] = [$selectedKeys[4]];
+                break;
         }
 
         if (isset($pagination) && $pagination !== false && isset($endButton)) {
@@ -192,19 +245,12 @@ abstract class CommandLocal extends Command
      */
     public function setMainKeyboard()
     {
-        $key = [];
-        $user = User::findOne(['user_id' => $this->_chatId]);
-
         $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'Contest Menu') . ' 🏁');
         $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'Results') . ' 📊');
         $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'Invite Friends') . ' 👬👭');
         $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'Guide') . ' 📚');
         $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'About Us') . ' 🔖');
-        if ($user->type == User::TYPE_NORMAL) {
-            $key[] = KeyboardButton::setNewKeyButton(Yii::t('app_1', 'Upgrade to premium') . ' 📤');
-        } else {
-            $key[] = KeyboardButton::setNewKeyButton('👸 ' . Yii::t('app_1', 'Premium Panel') . ' 🤴');
-        }
+        $key[] = KeyboardButton::setNewKeyButton('👸 ' . Yii::t('app_1', 'VIP Panel') . ' 🤴');
 
         $keyboard = [[$key[0]], [$key[1], $key[2]], [$key[3], $key[4]], [$key[5]]];
         $this->setKeyboard([

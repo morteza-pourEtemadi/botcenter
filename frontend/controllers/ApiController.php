@@ -3,9 +3,10 @@
 namespace frontend\controllers;
 
 use yii;
-use common\models\bot\Bot;
+use yii\helpers\Json;
 use yii\base\Exception;
 use yii\rest\Controller;
+use common\models\bot\Bot;
 use common\components\telegram\Parser;
 
 /**
@@ -34,14 +35,53 @@ class ApiController extends Controller
     public function actionHook($tokenId, $tokenString)
     {
         if ($this->getBot($tokenId, $tokenString) === null) {
+            $priceString = [
+                'objects' => [
+                    'upgrade' => 2000,
+                    'coins' => [
+                        [
+                            'count' => 50,
+                            'price' => 900,
+                        ],
+                        [
+                            'count' => 200,
+                            'price' => 3500,
+                        ],
+                        [
+                            'count' => 500,
+                            'price' => 8000,
+                        ],
+                        [
+                            'count' => 1000,
+                            'price' => 15000,
+                        ],
+                    ]
+                ]
+            ];
+            $translations = [
+                'Contest Menu' . ' 🏁' => '/contestMenu',
+                'منوی مسابقه' . ' 🏁' => '/contestMenu',
+                'Results' . ' 📊' => '/results',
+                'مشاهده نتایج' . ' 📊' => '/results',
+                'Invite Friends' . ' 👬👭' => '/invite',
+                'دعوت از دوستان' . ' 👬👭' => '/invite',
+                'Guide' . ' 📚' => '/help',
+                'راهنما' . ' 📚' => '/help',
+                'About Us' . ' 🔖' => '/about',
+                'درباره سازنده' . ' 🔖' => '/about',
+                'VIP Panel' . ' 🤴' => '/premium',
+                'منوی VIP' . ' 🤴' => '/premium'
+            ];
+
             $bot = new Bot([
-                'bot_id' => 16,
-                'telegram_id' => 12312,
-                'first_name' => 'myTestBot',
-                'username' => 'morteza_test_bot',
-                'token' => '227461477:AAFklo5LR-WyZFRVnmJYz2-CVWdgMBwJmUc',
+                'bot_id' => 1,
+                'telegram_id' => 350954048,
+                'first_name' => 'دابسمش',
+                'username' => 'iran_dubsmash_robot',
+                'token' => '350954048:AAH2zJy-YFZTPVybo18MHqzdyysPtBapuRo',
                 'type' => Bot::TYPE_IN_APP_PAYMENT,
-                'translations' => '[]',
+                'priceString' => Json::encode($priceString),
+                'translations' => Json::encode($translations)
             ]);
             var_dump($bot->save());
             exit('132');

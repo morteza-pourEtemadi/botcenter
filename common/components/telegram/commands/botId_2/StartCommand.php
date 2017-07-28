@@ -42,7 +42,7 @@ class StartCommand extends CommandLocal
             Yii::$app->language = 'fa-IR';
         }
 
-        if ($this->isJoinedChannel() == false) {
+        if ($this->isJoinedChannel('@UD_newsletter') == false) {
             $message = Yii::t('app_2', 'Please join our channel to be noticed of news and upcoming.');
             $this->setPartKeyboard('start');
             $this->sendMessage($message);

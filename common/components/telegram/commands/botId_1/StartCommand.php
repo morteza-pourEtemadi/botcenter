@@ -30,7 +30,7 @@ class StartCommand extends CommandLocal
 //        $this->killCache();
 //        exit('123');
         $newUser = false;
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         if ($this->paymentRendering($input)) {
             return true;
         }

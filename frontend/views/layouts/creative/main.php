@@ -59,7 +59,7 @@
                         <a href="https://instagram.com/__ultimate_developer__" target="_blank"><span class="social fa fa-instagram insta">&nbsp;</span></a>
                     </li>
                     <li>
-                        <a href="https://tlgrm.me/ultimate_developer_official" target="_blank"><span class="social fa fa-telegram channel">&nbsp;</span></a>
+                        <a href="https://tlgrm.me/ultimate_developer" target="_blank"><span class="social fa fa-telegram channel">&nbsp;</span></a>
                     </li>
                     <li>
                         <a href="https://twitter.com/ulti_developer" target="_blank"><span class="social fa fa-twitter tweeter">&nbsp;</span></a>
@@ -264,7 +264,7 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2><?= Yii::t('app_site', 'A Few Steps to Get Your Favorite Product!') ?></h2>
-                <a href="https://tlgrm.me/ultimate_developer" class="btn btn-default btn-xl sr-button" target="_blank"><span><?= Yii::t('app_site', 'Order Now!') ?></span></a>
+                <a href="https://tlgrm.me/ultimate_developer_admin" class="btn btn-default btn-xl sr-button" target="_blank"><span><?= Yii::t('app_site', 'Order Now!') ?></span></a>
             </div>
         </div>
     </aside>

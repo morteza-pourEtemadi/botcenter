@@ -24,7 +24,7 @@ class UpgradeCommand extends CommandLocal
      */
     public function execute()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         $user = User::findOne(['user_id' => $this->_chatId]);
         if (isset($input[1])) {
             $receipt = Receipt::findOne(['id' => $input[1]]);

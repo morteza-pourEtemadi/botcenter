@@ -21,7 +21,7 @@ class KeyboardCommand extends CommandLocal
      */
     public function execute()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         if (isset($input[2]) === false) {
             return false;
         }

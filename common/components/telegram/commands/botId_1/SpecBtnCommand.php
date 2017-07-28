@@ -24,7 +24,7 @@ class SpecBtnCommand extends CommandLocal
      */
     public function execute()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         if (isset($input[1])) {
             if (isset($input[2])) {
                 $user = User::findOne(['user_id' => $this->_chatId]);
@@ -93,20 +93,20 @@ class SpecBtnCommand extends CommandLocal
     {
         $plans = [
             0 => [
-                'time' => 43200,
+                'time' => 21600,
                 'coin' => 40
             ],
             1 => [
-                'time' => 86400,
+                'time' => 43200,
                 'coin' => 80
             ],
             2 => [
-                'time' => 259200,
-                'coin' => 240
+                'time' => 86400,
+                'coin' => 160
             ],
             3 => [
-                'time' => 604800,
-                'coin' => 510
+                'time' => 172800,
+                'coin' => 300
             ],
         ];
 

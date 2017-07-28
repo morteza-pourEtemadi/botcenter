@@ -115,7 +115,15 @@ msgid "Choose one of offers:"
 msgstr ""
 
 msgctxt "app_1"
+msgid "Congratulations! you earned {p} points."
+msgstr ""
+
+msgctxt "app_1"
 msgid "Contest Menu"
+msgstr ""
+
+msgctxt "app_1"
+msgid "Extra points"
 msgstr ""
 
 msgctxt "app_1"
@@ -144,6 +152,10 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "Hi {user} \nWelcome to {bot} bot. Enjoy your time here 😊.\nRead the guide if you need help"
+msgstr ""
+
+msgctxt "app_1"
+msgid "How to play"
 msgstr ""
 
 msgctxt "app_1"
@@ -199,7 +211,7 @@ msgid "Please vote for my clip. It`s an exciting competition with great prizes\n
 msgstr ""
 
 msgctxt "app_1"
-msgid "Premium Panel"
+msgid "Prizes"
 msgstr ""
 
 msgctxt "app_1"
@@ -251,7 +263,15 @@ msgid "Upgrade to premium to get more tickets to win the prize!!"
 msgstr ""
 
 msgctxt "app_1"
+msgid "Upgrading"
+msgstr ""
+
+msgctxt "app_1"
 msgid "Upgrading to premium lets you to send 6 clips instead of 2. So you have more chance to win. Also you can buy diamonds and speed up your score!"
+msgstr ""
+
+msgctxt "app_1"
+msgid "VIP Panel"
 msgstr ""
 
 msgctxt "app_1"
@@ -267,10 +287,6 @@ msgid "What do you do"
 msgstr ""
 
 msgctxt "app_1"
-msgid "You are a normal user. To use premium features, please upgrade your account first"
-msgstr ""
-
-msgctxt "app_1"
 msgid "You are trying to verify your payment more than once. If your connection is slow, please be patient! Otherwise don`t"
 msgstr ""
 
@@ -279,7 +295,7 @@ msgid "You earned {up} points for joining via invite link and person who invited
 msgstr ""
 
 msgctxt "app_1"
-msgid "You got to your limits of sending file. \n                If you are not a premium user, you can send more files with being premium; \n                And if you are already a premium user, it`s the end.\nPlease read the guides for more information"
+msgid "You got to your limits of sending file. If you are not a premium user, you can send more files with being premium; And if you are already a premium user, it`s the end.\nPlease read the guides for more information"
 msgstr ""
 
 msgctxt "app_1"
@@ -351,11 +367,19 @@ msgid "dislike "
 msgstr ""
 
 msgctxt "app_1"
-msgid "guide message"
+msgid "extra points"
+msgstr ""
+
+msgctxt "app_1"
+msgid "get extra points"
 msgstr ""
 
 msgctxt "app_1"
 msgid "hate "
+msgstr ""
+
+msgctxt "app_1"
+msgid "how to play"
 msgstr ""
 
 msgctxt "app_1"
@@ -383,6 +407,10 @@ msgid "number of loves:"
 msgstr ""
 
 msgctxt "app_1"
+msgid "prizes"
+msgstr ""
+
+msgctxt "app_1"
 msgid "release this"
 msgstr ""
 
@@ -392,6 +420,14 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "show clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid "skip this clip"
+msgstr ""
+
+msgctxt "app_1"
+msgid "upgrading and premium"
 msgstr ""
 
 msgctxt "app_1"
@@ -408,6 +444,14 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "which item you wanna go top?"
+msgstr ""
+
+msgctxt "app_1"
+msgid "which type of guide you need?"
+msgstr ""
+
+msgctxt "app_1"
+msgid "you have not joined any of channels"
 msgstr ""
 
 msgctxt "app_1"
@@ -436,6 +480,10 @@ msgstr ""
 
 msgctxt "app_1"
 msgid "⚠️"
+msgstr ""
+
+msgctxt "app_1"
+msgid "😍 {d} for {t} 😍"
 msgstr ""
 
 msgctxt "app_1"

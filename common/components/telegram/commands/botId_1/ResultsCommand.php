@@ -24,7 +24,7 @@ class ResultsCommand extends CommandLocal
      */
     public function execute()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         if (isset($input[1]) && $input[1] == 'detail') {
             $this->sendDetailBoard();
         } else {
@@ -60,7 +60,7 @@ class ResultsCommand extends CommandLocal
         $message .= '🏆' . Yii::t('app_1', 'your total score is:') . ' ' . $user->getScore() . '🏆';
         $message .= "\n\n@" . $this->bot->username;
 
-        $this->setPartKeyboard('competition');
+        $this->setPartKeyboard('competition', 1, 'comp');
         $this->sendMessage($message);
 
         return true;

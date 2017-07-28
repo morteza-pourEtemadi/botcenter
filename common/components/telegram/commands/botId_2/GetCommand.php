@@ -218,7 +218,7 @@ class GetCommand extends CommandLocal
             $message.= $item->text . "  ﴿" . $item->aya . "﴾" . "\n\n";
             $message.= $item->translation;
             $this->sendMessage($message);
-            usleep(100000);
+            usleep(350000);
         }
         $this->sendMessage($sm);
         $input = $this->getInput();

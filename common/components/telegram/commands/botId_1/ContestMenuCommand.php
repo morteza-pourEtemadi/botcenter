@@ -21,7 +21,7 @@ class ContestMenuCommand extends CommandLocal
      */
     public function execute()
     {
-        $this->setPartKeyboard('competition');
+        $this->setPartKeyboard('competition', 1, 'comp');
         $this->sendMessage(Yii::t('app_1', 'What can I do for you?'));
         return true;
     }

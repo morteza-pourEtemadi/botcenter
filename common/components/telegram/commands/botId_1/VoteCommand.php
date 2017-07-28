@@ -50,11 +50,12 @@ class VoteCommand extends CommandLocal
                 $vote->type = Vote::TYPE_LIKE;
                 break;
             case '3':
+                $user->bonus_score -= 2;
                 $itemOwner->Xs_dislikes += 1;
                 $vote->type = Vote::TYPE_DISLIKE;
                 break;
             case '4':
-                $user->coins -= 1;
+                $user->bonus_score -= 4;
                 $itemOwner->Xs_hates += 1;
                 $vote->type = Vote::TYPE_HATE;
                 break;
@@ -78,7 +79,7 @@ class VoteCommand extends CommandLocal
             $caption .= $item->caption;
 
             $this->setCache(['code' => $item->code, 'spec' => $item->specialOptions]);
-            $this->setPartKeyboard('voteItem');
+            $this->setPartKeyboard('voteItem', 1, 'vote');
             $this->sendFile($item->file_id, $caption);
 
             $seenXs = Json::decode($user->seenXs);
@@ -86,7 +87,7 @@ class VoteCommand extends CommandLocal
             $user->seenXs = Json::encode($seenXs);
             $user->save();
         } else {
-            $this->setPartKeyboard('competition');
+            $this->setPartKeyboard('competition', 1, 'comp');
             $this->sendMessage(Yii::t('app_1', 'There is no more clips to watch! Please visit again later.'));
         }
         return true;

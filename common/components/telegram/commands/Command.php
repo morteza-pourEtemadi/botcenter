@@ -703,9 +703,9 @@ abstract class Command extends Component
         return $returnTime;
     }
 
-    public function isJoinedChannel()
+    public function isJoinedChannel($username)
     {
-        $response = $this->api->getChatMember('@UD_newsletter', $this->_chatId);
+        $response = $this->api->getChatMember($username, $this->_chatId);
         if ($response->ok == true) {
             $status = $response->result->status;
             if ($status == 'left' || $status == 'kicked') {

@@ -22,7 +22,7 @@ class VoteLinkCommand extends CommandLocal
      */
     public function execute()
     {
-        $input = explode(' ', $this->_messageText);
+        $input = $this->getInput();
         if (isset($input[1])) {
             $item = X::findOne(['id' => $input[1]]);
             $url = 'https://t.me/' . $this->bot->username . '?start=' . $item->code;
@@ -30,7 +30,7 @@ class VoteLinkCommand extends CommandLocal
             $message = Yii::t('app_1', "Please vote for my clip. It`s an exciting competition with great prizes\n\nClick the following link to watch my dubsmash and vote for it\n");
             $message .= $url;
 
-            $this->setPartKeyboard('competition');
+            $this->setPartKeyboard('competition', 1, 'comp');
             $this->sendMessage($message);
         } else {
             $i = 0;
