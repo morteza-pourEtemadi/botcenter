@@ -26,13 +26,6 @@ class StartCommand extends CommandLocal
      */
     public function execute()
     {
-        /**
-         * @TODO: write cron controller functions to check channel joining
-         */
-//        var_dump(Subscribers::deleteAll());
-//        var_dump(User::deleteAll());
-//        $this->killCache();
-//        exit('123');
         $newUser = false;
         $input = $this->getInput();
         if ($this->paymentRendering($input)) {
