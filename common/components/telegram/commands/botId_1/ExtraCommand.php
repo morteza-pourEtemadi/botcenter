@@ -2,6 +2,7 @@
 
 namespace common\components\telegram\commands\botId_1;
 
+use common\models\bot\botId_1\User;
 use Yii;
 
 /**
@@ -22,8 +23,15 @@ class ExtraCommand extends CommandLocal
     public function execute()
     {
         $points = 0;
-        $points += $this->isJoinedChannel('@UD_newsletter') ? 500 : 0;
-        $points += $this->isJoinedChannel('@ultimate_developer') ? 1000 : 0;
+        $user = User::findOne(['user_id' => $this->_chatId]);
+        if ($user->extra == 0) {
+            $points += $this->isJoinedChannel('@UD_newsletter') ? 500 : 0;
+            $points += $this->isJoinedChannel('@ultimate_developer') ? 1000 : 0;
+        } elseif ($user->extra == 500) {
+            $points += $this->isJoinedChannel('@ultimate_developer') ? 1000 : 0;
+        } elseif ($user->extra == 1000) {
+            $points += $this->isJoinedChannel('@UD_newsletter') ? 500 : 0;
+        }
 
         if ($points == 0) {
             $this->setPartKeyboard('extra');

@@ -20,6 +20,7 @@ use common\components\RedisActiveRecord;
  * @property integer Xs_dislikes
  * @property integer Xs_hates
  * @property integer bonus_score
+ * @property integer extra
  *
  * @property Users $uniqueUser
  */
@@ -42,13 +43,14 @@ class User extends RedisActiveRecord
             'Xs_dislikes',
             'Xs_hates',
             'bonus_score',
+            'extra'
         ];
     }
 
     public function rules()
     {
         return [
-            [['user_id', 'type', 'XsNo', 'coins', 'Xs_loves', 'Xs_likes', 'Xs_dislikes', 'Xs_hates', 'bonus_score'], 'integer'],
+            [['user_id', 'type', 'XsNo', 'coins', 'Xs_loves', 'Xs_likes', 'Xs_dislikes', 'Xs_hates', 'bonus_score', 'extra'], 'integer'],
             ['seenXs', 'string'],
             ['seenXs', 'default', 'value' => '[]'],
             ['type', 'default', 'value' => self::TYPE_NORMAL],
