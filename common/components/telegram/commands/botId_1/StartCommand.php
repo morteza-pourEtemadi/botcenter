@@ -2,6 +2,7 @@
 
 namespace common\components\telegram\commands\botId_1;
 
+use amirasaran\zarinpal\Zarinpal;
 use Yii;
 use yii\helpers\Json;
 use common\models\bot\botId_1\X;
@@ -25,6 +26,9 @@ class StartCommand extends CommandLocal
      */
     public function execute()
     {
+        /**
+         * @TODO: write cron controller functions to check channel joining
+         */
 //        var_dump(Subscribers::deleteAll());
 //        var_dump(User::deleteAll());
 //        $this->killCache();

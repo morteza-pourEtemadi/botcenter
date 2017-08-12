@@ -262,8 +262,16 @@ abstract class CommandLocal extends Command
 
     public function beforeExecute()
     {
+        $testers = [
+            self::CID_MORTEZA_POURETEMADI,
+            self::CID_ULTIMATE_ADMIN,
+            self::CID_ULTIMATE_ADS_ADMIN,
+            self::CID_Z_BANOO,
+            self::CID_MOEIN_PROTA,
+            self::CID_MAHDI_AMARLOO,
+        ];
         parent::beforeExecute();
-        if (array_search($this->_chatId, [101538817, 121312382, 289670029, 329799079], false)) {
+        if (array_search($this->_chatId, $testers, false)) {
             return false;
         }
         return true;

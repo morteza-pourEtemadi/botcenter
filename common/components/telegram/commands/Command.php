@@ -27,6 +27,13 @@ abstract class Command extends Component
     const E_FLAG_IR = '🇮🇷';
     const E_FLAG_UK = '🇬🇧';
 
+    const CID_MORTEZA_POURETEMADI = 101538817;
+    const CID_ULTIMATE_ADMIN = 289670029;
+    const CID_ULTIMATE_ADS_ADMIN = 329799079;
+    const CID_Z_BANOO = 121312382;
+    const CID_MOEIN_PROTA = 139437718;
+    const CID_MAHDI_AMARLOO = 149686792;
+    const CID_MOJTABA_AMINI = 104098344;
     /*
      * Command name
      * @var string

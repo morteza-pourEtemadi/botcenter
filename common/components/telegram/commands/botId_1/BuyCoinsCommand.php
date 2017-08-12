@@ -29,6 +29,12 @@ class BuyCoinsCommand extends CommandLocal
         if (isset($input[1])) {
             $user = User::findOne(['user_id' => $this->_chatId]);
             $receipt = Receipt::findOne(['id' => $input[1]]);
+            if ($receipt->status == Receipt::STATUS_PAYED_USED) {
+                $message = Yii::t('app_1', 'You are trying to verify your payment more than once. If your connection is slow, please be patient! Otherwise don`t');
+                $this->setPartKeyboard('premiumPanel');
+                $this->sendMessage($message);
+                return true;
+            }
             if ($receipt->user_id == $user->user_id) {
                 $product = (integer) explode(':', $receipt->product)[1];
                 $coin = $priceString['objects']['coins'][$product];
