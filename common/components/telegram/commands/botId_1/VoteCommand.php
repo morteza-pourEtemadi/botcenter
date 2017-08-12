@@ -34,7 +34,8 @@ class VoteCommand extends CommandLocal
         $user = User::findOne(['user_id' => $this->_chatId]);
         $seen = Json::decode($user->seenXs);
         $itemOwner = User::findOne(['user_id' => $item->creator_id]);
-        if (array_search($item->id, $seen, false) === false) {
+        $vote = Vote::findOne(['voter' => $user->id, 'item' => $item->id]);
+        if ($vote == null) {
             $vote = new Vote([
                 'voter' => $user->id,
                 'item' => $item->id,
@@ -70,30 +71,27 @@ class VoteCommand extends CommandLocal
             $user->save();
             $itemOwner->save();
         } else {
-            $vote = Vote::findOne(['voter' => $user->id, 'item' => $item->id]);
-            if ($vote) {
-                switch ($vote->type) {
-                    case Vote::TYPE_LOVE:
-                        $user->coins -= 2;
-                        $itemOwner->Xs_loves -= 1;
-                        break;
-                    case Vote::TYPE_LIKE:
-                        $user->coins -= 1;
-                        $itemOwner->Xs_likes -= 1;
-                        break;
-                    case Vote::TYPE_DISLIKE:
-                        $user->bonus_score += 2;
-                        $itemOwner->Xs_dislikes -= 1;
-                        break;
-                    case Vote::TYPE_HATE:
-                        $user->bonus_score += 4;
-                        $itemOwner->Xs_hates -= 1;
-                        break;
-                    case Vote::TYPE_REPORT:
-                        $this->setMainKeyboard();
-                        $this->sendMessage(Yii::t('app_1', 'You have reported this clip before.'));
-                        return false;
-                }
+            switch ($vote->type) {
+                case Vote::TYPE_LOVE:
+                    $user->coins -= 2;
+                    $itemOwner->Xs_loves -= 1;
+                    break;
+                case Vote::TYPE_LIKE:
+                    $user->coins -= 1;
+                    $itemOwner->Xs_likes -= 1;
+                    break;
+                case Vote::TYPE_DISLIKE:
+                    $user->bonus_score += 2;
+                    $itemOwner->Xs_dislikes -= 1;
+                    break;
+                case Vote::TYPE_HATE:
+                    $user->bonus_score += 4;
+                    $itemOwner->Xs_hates -= 1;
+                    break;
+                case Vote::TYPE_REPORT:
+                    $this->setMainKeyboard();
+                    $this->sendMessage(Yii::t('app_1', 'You have reported this clip before.'));
+                    return false;
             }
             switch ($input[1]) {
                 case '1':
