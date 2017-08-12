@@ -259,21 +259,4 @@ abstract class CommandLocal extends Command
             'one_time_keyboard' => true,
         ]);
     }
-
-    public function beforeExecute()
-    {
-        $testers = [
-            self::CID_MORTEZA_POURETEMADI,
-            self::CID_ULTIMATE_ADMIN,
-            self::CID_ULTIMATE_ADS_ADMIN,
-            self::CID_Z_BANOO,
-            self::CID_MOEIN_PROTA,
-            self::CID_MAHDI_AMARLOO,
-        ];
-        parent::beforeExecute();
-        if (array_search($this->_chatId, $testers, false)) {
-            return false;
-        }
-        return true;
-    }
 }
