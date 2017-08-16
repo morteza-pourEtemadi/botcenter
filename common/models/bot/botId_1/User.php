@@ -70,7 +70,7 @@ class User extends RedisActiveRecord
     {
         $score = (($this->Xs_loves * 2) + $this->Xs_likes - $this->Xs_dislikes - ($this->Xs_hates * 1.8)) * 12;
         $score = floor($score);
-        return $score + $this->bonus_score;
+        return $score + $this->bonus_score + $this->extra;
     }
 
     public function getAName()
