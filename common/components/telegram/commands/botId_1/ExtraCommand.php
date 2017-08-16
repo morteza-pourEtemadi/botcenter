@@ -37,6 +37,8 @@ class ExtraCommand extends CommandLocal
             $this->setPartKeyboard('extra');
             $this->sendMessage(Yii::t('app_1', 'you have not joined any of channels'));
         } else {
+            $user->extra += $points;
+            $user->save();
             $this->killKeyboard();
             $this->sendMessage(Yii::t('app_1', 'Congratulations! you earned {p} points.', ['p' => $points]));
 
