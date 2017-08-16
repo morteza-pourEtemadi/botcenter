@@ -129,7 +129,7 @@ class VoteCommand extends CommandLocal
         $item = $this->getItem();
         if ($item) {
             $caption = Yii::t('app_1', 'Sent Clip By:');
-            $caption .= $user->type == User::TYPE_PREMIUM ? ' 👑 ' : ' ' . $user->getAName() . "\n\n";
+            $caption .= ($user->type == User::TYPE_PREMIUM ? ' 👑 ' : ' ') . $user->getAName() . "\n\n";
             $caption .= Yii::t('app_1', 'which Captioned as:') . "\n";
             $caption .= $item->caption;
 
