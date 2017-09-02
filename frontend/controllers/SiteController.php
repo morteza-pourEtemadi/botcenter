@@ -77,12 +77,6 @@ class SiteController extends Controller
         ];
     }
 
-    public function beforeAction($action)
-    {
-        $this->layout = 'creative/main';
-        return parent::beforeAction($action);
-    }
-
     /**
      * Displays homepage.
      *

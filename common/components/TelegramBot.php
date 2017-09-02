@@ -2,11 +2,10 @@
 
 namespace common\components;
 
-use common\components\telegram\types\Chat;
-use phpDocumentor\Reflection\Types\Null_;
 use yii;
 use yii\base\Component;
 use yii\base\InvalidParamException;
+use common\components\telegram\types\Chat;
 
 /**
  * Telegram Bot
@@ -271,6 +270,28 @@ class TelegramBot extends Component
         ];
 
         return $this->post('sendVideo', $params);
+    }
+
+    /**
+     * Sends any type of files depending on its type
+     * @param $file
+     * @param $caption
+     * @param null $replyMessageId
+     * @return mixed
+     */
+    public function sendFile($chatId, $file, $caption, $replyMessageId = null, $replyMarkUp)
+    {
+        $send = $this->sendPhoto($chatId, $file, $caption, $replyMessageId, $replyMarkUp);
+        if ($send->ok === false) {
+            $send = $this->sendAudio($chatId, $file, $caption, $replyMessageId, $replyMarkUp);
+            if ($send->ok === false) {
+                $send = $this->sendVideo($chatId, $file, $caption, $replyMessageId, $replyMarkUp);
+                if ($send->ok === false) {
+                    $send = $this->sendDocument($chatId, $file, $caption, $replyMessageId, $replyMarkUp);
+                }
+            }
+        }
+        return $send;
     }
 
     /**

@@ -2,7 +2,6 @@
 
 namespace common\models\bot\botId_2;
 
-use yii\helpers\Json;
 use common\components\RedisActiveRecord;
 
 /**

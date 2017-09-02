@@ -3,7 +3,6 @@
 namespace common\components\telegram\commands\botId_2;
 
 use common\models\bot\botId_2\Hadith;
-use Yii;
 
 /**
  * Sample Command for guide purpose

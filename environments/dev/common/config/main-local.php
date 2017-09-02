@@ -7,6 +7,7 @@ return [
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',
+            'tablePrefix' => 'ud_',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -21,6 +22,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'api/hook/<tokenId:[\d]+>:<tokenString:[^\/]+>' => 'api/hook',
+                'send/massive/<tokenId:[\d]+>:<tokenString:[^\/]+>' => 'send/massive',
             ],
         ],
         'redis' => [

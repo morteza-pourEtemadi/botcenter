@@ -3,10 +3,11 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=bots',
+            'dsn' => 'mysql:host=localhost;dbname=ultimatedevelopers',
             'username' => 'root',
             'password' => 'SDKmtz137261!@#',
             'charset' => 'utf8',
+            'tablePrefix' => 'ud_',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -21,6 +22,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'api/hook/<tokenId:[\d]+>:<tokenString:[^\/]+>' => 'api/hook',
+                'send/massive/<tokenId:[\d]+>:<tokenString:[^\/]+>' => 'send/massive',
             ],
         ],
         'redis' => [
